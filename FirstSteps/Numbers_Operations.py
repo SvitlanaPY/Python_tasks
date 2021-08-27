@@ -148,3 +148,19 @@ True
 # stroka1, stroka2 = input(), input()
 # res = stroka1 != stroka2
 # print("stroka1 НЕ рівна stroka2? ", res)
+#
+# ()
+"""
+В геометрии существует формула, позволяющая найти площадь треугольника, зная его стороны. 
+Называется она формулой Герона и выглядит так:
+S = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+"""
+a, b, c = float(input()), float(input()), float(input())
+p = (a + b + c) / 2
+S = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+# або  S = (p * (p - a) * (p - b) * (p - c)) ** (1/2)
+# або
+# n = p * (p - a) * (p - b) * (p - c)
+# S = n ** (1 / 2)
+print(S)
+
