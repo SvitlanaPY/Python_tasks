@@ -1,0 +1,70 @@
+2021-08-18 20:32:19,504 - Mike - DEBUG - doubler function executing
+2021-08-18 20:32:19,505 - George - DEBUG - doubler function executing
+2021-08-18 20:32:19,506 - George - DEBUG - doubler function ended with: 2
+2021-08-18 20:32:19,505 - Wanda - DEBUG - doubler function executing
+2021-08-18 20:32:19,506 - Wanda - DEBUG - doubler function ended with: 4
+2021-08-18 20:32:19,506 - Dingbat - DEBUG - doubler function executing
+2021-08-18 20:32:19,505 - Mike - DEBUG - doubler function ended with: 0
+2021-08-18 20:32:19,507 - Nina - DEBUG - doubler function executing
+2021-08-18 20:32:19,507 - Dingbat - DEBUG - doubler function ended with: 6
+2021-08-18 20:32:19,507 - Nina - DEBUG - doubler function ended with: 8
+2021-08-18 20:32:29,704 - Mike - DEBUG - doubler function executing
+2021-08-18 20:32:29,705 - Mike - DEBUG - doubler function ended with: 0
+2021-08-18 20:32:29,705 - George - DEBUG - doubler function executing
+2021-08-18 20:32:29,705 - George - DEBUG - doubler function ended with: 2
+2021-08-18 20:32:29,706 - Wanda - DEBUG - doubler function executing
+2021-08-18 20:32:29,706 - Wanda - DEBUG - doubler function ended with: 4
+2021-08-18 20:32:29,706 - Dingbat - DEBUG - doubler function executing
+2021-08-18 20:32:29,707 - Dingbat - DEBUG - doubler function ended with: 6
+2021-08-18 20:32:29,707 - Nina - DEBUG - doubler function executing
+2021-08-18 20:32:29,707 - Nina - DEBUG - doubler function ended with: 8
+2021-08-19 18:11:29,778 - Mike - DEBUG - doubler function executing
+2021-08-19 18:11:29,779 - George - DEBUG - doubler function executing
+2021-08-19 18:11:29,779 - Wanda - DEBUG - doubler function executing
+2021-08-19 18:11:29,779 - Dingbat - DEBUG - doubler function executing
+2021-08-19 18:11:29,779 - Nina - DEBUG - doubler function executing
+2021-08-19 18:11:29,802 - Mike - DEBUG - doubler function ended with: 0
+2021-08-19 18:11:29,802 - George - DEBUG - doubler function ended with: 2
+2021-08-19 18:11:29,802 - Wanda - DEBUG - doubler function ended with: 4
+2021-08-19 18:11:29,802 - Dingbat - DEBUG - doubler function ended with: 6
+2021-08-19 18:11:29,803 - Nina - DEBUG - doubler function ended with: 8
+2021-08-19 18:11:35,177 - Mike - DEBUG - doubler function executing
+2021-08-19 18:11:35,177 - Mike - DEBUG - doubler function ended with: 0
+2021-08-19 18:11:35,178 - George - DEBUG - doubler function executing
+2021-08-19 18:11:35,178 - George - DEBUG - doubler function ended with: 2
+2021-08-19 18:11:35,182 - Wanda - DEBUG - doubler function executing
+2021-08-19 18:11:35,182 - Wanda - DEBUG - doubler function ended with: 4
+2021-08-19 18:11:35,182 - Dingbat - DEBUG - doubler function executing
+2021-08-19 18:11:35,182 - Dingbat - DEBUG - doubler function ended with: 6
+2021-08-19 18:11:35,183 - Nina - DEBUG - doubler function executing
+2021-08-19 18:11:35,183 - Nina - DEBUG - doubler function ended with: 8
+2021-08-19 18:11:37,202 - Mike - DEBUG - doubler function executing
+2021-08-19 18:11:37,203 - Mike - DEBUG - doubler function ended with: 0
+2021-08-19 18:11:37,210 - George - DEBUG - doubler function executing
+2021-08-19 18:11:37,211 - George - DEBUG - doubler function ended with: 2
+2021-08-19 18:11:37,217 - Wanda - DEBUG - doubler function executing
+2021-08-19 18:11:37,221 - Wanda - DEBUG - doubler function ended with: 4
+2021-08-19 18:11:37,225 - Dingbat - DEBUG - doubler function executing
+2021-08-19 18:11:37,226 - Dingbat - DEBUG - doubler function ended with: 6
+2021-08-19 18:11:37,233 - Nina - DEBUG - doubler function executing
+2021-08-19 18:11:37,234 - Nina - DEBUG - doubler function ended with: 8
+2021-08-19 18:11:37,778 - Mike - DEBUG - doubler function executing
+2021-08-19 18:11:37,779 - Mike - DEBUG - doubler function ended with: 0
+2021-08-19 18:11:37,779 - George - DEBUG - doubler function executing
+2021-08-19 18:11:37,779 - George - DEBUG - doubler function ended with: 2
+2021-08-19 18:11:37,782 - Wanda - DEBUG - doubler function executing
+2021-08-19 18:11:37,782 - Wanda - DEBUG - doubler function ended with: 4
+2021-08-19 18:11:37,782 - Dingbat - DEBUG - doubler function executing
+2021-08-19 18:11:37,783 - Dingbat - DEBUG - doubler function ended with: 6
+2021-08-19 18:11:37,786 - Nina - DEBUG - doubler function executing
+2021-08-19 18:11:37,786 - Nina - DEBUG - doubler function ended with: 8
+2021-08-19 18:11:39,362 - Mike - DEBUG - doubler function executing
+2021-08-19 18:11:39,363 - Mike - DEBUG - doubler function ended with: 0
+2021-08-19 18:11:39,364 - George - DEBUG - doubler function executing
+2021-08-19 18:11:39,370 - George - DEBUG - doubler function ended with: 2
+2021-08-19 18:11:39,372 - Wanda - DEBUG - doubler function executing
+2021-08-19 18:11:39,373 - Wanda - DEBUG - doubler function ended with: 4
+2021-08-19 18:11:39,373 - Dingbat - DEBUG - doubler function executing
+2021-08-19 18:11:39,373 - Dingbat - DEBUG - doubler function ended with: 6
+2021-08-19 18:11:39,374 - Nina - DEBUG - doubler function executing
+2021-08-19 18:11:39,374 - Nina - DEBUG - doubler function ended with: 8

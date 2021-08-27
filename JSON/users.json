@@ -1,0 +1,32 @@
+[
+	{
+			'first_name': 'Kurt',
+			'id': 621547001,
+			'last_name': 'Cobain',
+			'bdate': '31.8.2005'
+		},
+		{
+			'first_name': 'Kate',
+			'id': 621547002,
+			'last_name': 'Lee',
+			'bdate': '20.8.1959'
+		},
+		{
+			'first_name': 'Nick',
+			'id': 621547003,
+			'last_name': 'Rome',
+			'bdate': '28.8.1942'
+		},
+		{
+			'first_name': 'David',
+			'id': 621547004,
+			'last_name': 'Jonson',
+			'bdate': '4.7.2002'
+		},
+		{
+			'first_name': 'Tom',
+			'id': 184902932,
+			'last_name': 'Smith',
+			'bdate': '25.5'
+		}
+	]
