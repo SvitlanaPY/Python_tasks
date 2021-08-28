@@ -24,8 +24,8 @@
 # print("round(456)=", (round(456, -1)))   # 456 ближче до 450 чи до 460?  =460
 # print("round(453)=", (round(453, -1)))   # 453 ближче до 450 чи до 440?  =450
 # print("round(456)=", (round(456, -2)))   # 456 ближче до 400 чи до 500?  =500
-print(9**(1/2))   # =3.0: квадратний корінь з 9
-print(round(729**(1/3)))   # =9: кубічний корінь з 729
+# print(9**(1/2))   # =3.0: квадратний корінь з 9
+# print(round(729**(1/3)))   # =9: кубічний корінь з 729
 # ()
 """
 Sample Input 2:
@@ -40,6 +40,8 @@ Sample Output 2:
 # print(S)
 #
 # ()
+import keyword
+
 """Напишите программу, переводящую введенное количество сантиметров в метры.
 Sample Input:
 845
@@ -155,12 +157,14 @@ True
 Называется она формулой Герона и выглядит так:
 S = (p * (p - a) * (p - b) * (p - c)) ** 0.5
 """
-a, b, c = float(input()), float(input()), float(input())
-p = (a + b + c) / 2
-S = (p * (p - a) * (p - b) * (p - c)) ** 0.5
-# або  S = (p * (p - a) * (p - b) * (p - c)) ** (1/2)
-# або
-# n = p * (p - a) * (p - b) * (p - c)
-# S = n ** (1 / 2)
-print(S)
+# a, b, c = float(input()), float(input()), float(input())
+# p = (a + b + c) / 2
+# S = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+# # або  S = (p * (p - a) * (p - b) * (p - c)) ** (1/2)
+# # або
+# # n = p * (p - a) * (p - b) * (p - c)
+# # S = n ** (1 / 2)
+# print(S)
 
+print(keyword.iskeyword("if"))
+print(keyword.kwlist)
