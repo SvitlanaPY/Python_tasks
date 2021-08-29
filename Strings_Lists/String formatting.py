@@ -115,3 +115,15 @@ for name, midname, balance, sex in lst_t:
     # print(name, midname, balance)
     text8 = f"{gender[sex]} {name} {midname}, у вас {balance}$ бонусів"
     print(text8)
+
+print()
+# 17: Необходимо вывести результат трех видов деления первого числа на второе в определенном формате
+# Sample Input 1:
+# 11
+# 5
+# Sample Output 1:
+# 11 / 5 = 2.2
+# 11 // 5 = 2
+# 11 % 5 = 1
+a, b = int(input("Enter val1: ")), int(input("Enter val2: "))
+print(f'{a} / {b} = {a / b}\n{a} // {b} = {a // b}\n{a} % {b} = {a % b}')
