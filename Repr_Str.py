@@ -28,3 +28,4 @@ import datetime
 today = datetime.datetime.now()
 print(str(today))    # 2021-08-30 18:49:00.352057
 print(repr(today))   # datetime.datetime(2021, 8, 30, 18, 49, 0, 352057) - официальное представление обєкта дати
+
