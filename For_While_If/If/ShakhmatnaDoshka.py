@@ -14,6 +14,11 @@ if ((row_1 + column_1) % 2 == 0 and (row_2 + column_2) % 2 == 0) or ((row_1 + co
     print("YES")
 else:
     print("NO")
+#
+# if (row_1 + column_1) % 2 == (row_2 + column_2) % 2:
+#     print("YES")
+# else:
+#     print("NO")
 
 # if ((column_1 % 2 == 0 and row_1 % 2 == 0) and (column_2 % 2 == 0 and row_2 % 2 == 0)) \
 #         or ((column_1 % 2 == 0 and row_1 % 2 == 0) and (column_2 % 2 == 1 and row_2 % 2 == 1)) \
