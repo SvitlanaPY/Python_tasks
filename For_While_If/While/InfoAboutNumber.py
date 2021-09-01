@@ -8,7 +8,7 @@ maxx_ = 0
 minn_ = 9
 while x > 0:
     last_num = x % 10
-    print(last_num)   # - виводимо цифри з кінця
+    # print(last_num)   # - виводимо цифри з кінця
     if last_num % 2 == 0:
         amount_parni += 1
     else:
