@@ -7,7 +7,7 @@ A = int(input())
 i = 2       # для збереження номеру числа Фібоначі
 pp = 0      # element before previous; нулевое число Фибоначи
 p = 1       # previous element; первое число Фибоначи
-res = 1     # current element
+res = 1     # обчислений результат
 while res < A:
     res = p + pp
     pp = p
