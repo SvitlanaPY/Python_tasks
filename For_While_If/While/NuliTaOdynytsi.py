@@ -12,13 +12,30 @@
 # Во втором тесте из условия строка может меняться следующим образом: 01010 -> 010 -> 0.
 # В третьем тесте из условия строка может меняться следующим образом: 11101111 -> 111111.
 
-m = int(input())
-n = input()
-while '01' or '10' in n:
-    if '01' in n:
-        n = n.replace('01', '')
-    elif '10' in n:
-        n = n.replace('10', '')
-    else:
-        break
-print(len(n))
+# m = int(input())
+# n = input()
+# ones = n.count('1')
+# zeros = n.count('0')
+# pairs = min(ones, zeros)
+# str_ = ((ones - pairs) + (zeros - pairs))
+# print(str_)
+
+# # (2)
+# m = int(input())
+# n = input()
+# while '01' in n or '10' in n:
+#     n = n.replace('01', '')
+#     n = n.replace('10', '')
+# print(len(n))
+
+# # (3)
+# m = int(input())
+# n = input()
+# while '01' or '10' in n:
+#     if '01' in n:
+#         n = n.replace('01', '')
+#     elif '10' in n:
+#         n = n.replace('10', '')
+#     else:
+#         break
+# print(len(n))
