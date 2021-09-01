@@ -47,17 +47,19 @@ girls.sort()
 pairs = 0
 i = 0
 while i < b:
-    ii = 0
-    while ii < len(girls):
-        if abs(boys[i] - girls[ii]) <= 1:
+    j = 0
+    while j < len(girls):
+        print(len(girls))
+        if abs(boys[i] - girls[j]) <= 1:
             pairs = pairs + 1
-            girls.pop(ii)
+            girls.pop(j)
             break
-        ii = ii + 1
+        j = j + 1
     i = i + 1
 print(pairs)
 
 
+# # (2)
 # b = int(input())
 # boys = list(map(int, input().split()))
 # g = int(input())
@@ -68,6 +70,8 @@ print(pairs)
 # i = 0   # вказівник boys
 # j = 0   # вказівник girls
 # while i < b and j < g:
+#     print(boys[i])
+#     print(girls[j])
 #     if abs(boys[i] - girls[j]) <= 1:
 #         pairs = pairs + 1
 #         j = j + 1
