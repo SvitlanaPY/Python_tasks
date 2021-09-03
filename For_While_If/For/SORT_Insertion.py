@@ -18,8 +18,10 @@
 # Sample Output 2:
 # 1 2 5 8 11
 
-n = int(input())
-mas = list(map(int, input().split()))
+# n = int(input())
+# mas = list(map(int, input().split()))
+n = 6
+mas = [5, 7, 4, 3, 8, 2, 9, 15]
 for i in range(1, n):
     for j in range(i, 0, -1):
         if mas[j] < mas[j - 1]:
