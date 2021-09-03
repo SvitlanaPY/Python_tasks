@@ -1,4 +1,5 @@
-# Сортировка вставками
+# Сортировка вставками (лінійний алгоритм)
+# лінійний, бо час виконання лінійний - к-сть циклів виконання залежить від змінної n
 # Это еще один вид сортировки, который реализуется при помощи вложенных циклов
 
 # Программа получает на вход число n - количество элементов в списке, и затем в следующей строке сам список.
@@ -18,14 +19,52 @@
 # Sample Output 2:
 # 1 2 5 8 11
 
+count = 0
+n = 10
+mas = [12, 14, 5, 7, 4, 3, 8, -15, 2, -7]
+for i in range(1, n):
+    save = mas[i]    # у змінну save записуємо елемент для вставки; індекс елемента = № обходу
+    while i != 0 and mas[i - 1] > save:
+        count += 1
+        mas[i] = mas[i - 1]
+        i -= 1
+    mas[i] = save
+print(mas)
+print(count)
+
+
+# count = 0
+# n = 10
+# mas = [12, -4, 5, 7, 4, 3, 8, -15, 2, -7]
+# for i in range(1, n):
+#     save = mas[i]    # у змінну save записуємо елемент для вставки; індекс елемента = № обходу
+#     j = i
+#     while j != 0 and mas[j - 1] > save:
+#         count += 1
+#         mas[j] = mas[j - 1]
+#         j -= 1
+#     mas[j] = save
+# print(mas)
+# print(count)
+
+
+
+
+
+
+
+
 # n = int(input())
 # mas = list(map(int, input().split()))
-n = 6
-mas = [5, 7, 4, 3, 8, 2, 9, 15]
-for i in range(1, n):
-    for j in range(i, 0, -1):
-        if mas[j] < mas[j - 1]:
-            mas[j], mas[j - 1] = mas[j - 1], mas[j]
-        else:
-            break
-print(*mas)
+# count = 0
+# n = 8
+# mas = [5, 7, 4, 3, 8, -15, 2, -7]
+# for i in range(1, n):
+#     for j in range(i, 0, -1):
+#         if mas[j] < mas[j - 1]:
+#             count += 1
+#             mas[j], mas[j - 1] = mas[j - 1], mas[j]
+#         else:
+#             break
+# print(*mas)
+# print(count)
