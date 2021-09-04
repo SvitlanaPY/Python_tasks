@@ -35,6 +35,7 @@
 # ivan 4
 # sergey 100000
 
+
 n = int(input())
 d = {}
 for i in range(n):
