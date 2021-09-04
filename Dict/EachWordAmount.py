@@ -5,6 +5,8 @@
 # слова разделены одним или большим числом пробелов или символами конца строки.
 # INPUTS:
 # one two one tho three two one three one two
+# OUTPUTS:
+# 0 0 1 0 0 1 2 1 3 2
 
 text = input().split()
 d = {}
