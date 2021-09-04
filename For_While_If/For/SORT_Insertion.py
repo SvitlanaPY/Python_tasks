@@ -23,12 +23,12 @@ count = 0
 n = 10
 mas = [12, 14, 5, 7, 4, 3, 8, -15, 2, -7]
 for i in range(1, n):
-    save = mas[i]    # у змінну save записуємо елемент для вставки; індекс елемента = № обходу
-    while i != 0 and mas[i - 1] > save:
+    save = mas[i]    # у змінну save записуємо елемент для вставки; індекс елемента = № обходу; save - як підмасив
+    while i != 0 and mas[i - 1] > save:   # порвняння елементу, записаного в save із попереднім елементом
         count += 1
-        mas[i] = mas[i - 1]
-        i -= 1
-    mas[i] = save
+        mas[i] = mas[i - 1]   # переміщення/зсув вправо елемента, більшого за save
+        i -= 1   # зміщення циклу вліво (зменшення)
+    mas[i] = save   # вставляємо менший елемент у потрібну позицію
 print(mas)
 print(count)
 
@@ -45,26 +45,4 @@ print(count)
 #         j -= 1
 #     mas[j] = save
 # print(mas)
-# print(count)
-
-
-
-
-
-
-
-
-# n = int(input())
-# mas = list(map(int, input().split()))
-# count = 0
-# n = 8
-# mas = [5, 7, 4, 3, 8, -15, 2, -7]
-# for i in range(1, n):
-#     for j in range(i, 0, -1):
-#         if mas[j] < mas[j - 1]:
-#             count += 1
-#             mas[j], mas[j - 1] = mas[j - 1], mas[j]
-#         else:
-#             break
-# print(*mas)
 # print(count)
