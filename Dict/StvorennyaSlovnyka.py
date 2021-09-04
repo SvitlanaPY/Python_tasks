@@ -30,6 +30,9 @@ print("dd =  ", dd)
 ddd = dict(zip(['Spain', 'Ukraine', 'USA'], ['Madrid', 'Kiev', 'Washington']))
 print("ddd =  ", ddd)
 # ddd =   {'Spain': 'Madrid', 'Ukraine': 'Kiev', 'USA': 'Washington'}
+A = dict(zip('abcdef', range(6)))
+print("A=  ", A)
+# A=   {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5}
 
 
 # метод fromkeys перетворює в ключ кожен елемент нашого списку, і автоматично присвоює значення ключа в None
@@ -49,6 +52,7 @@ s = {1: 'one', 2: 'two', 3: 'three', 'Lviv': 380322}
 print(s[2])   # two
 print(s['Lviv'])   # 380322
 # Если элемента с заданным ключом нет в словаре, то возникает исключение KeyError.
+
 
 # Щоб створити нову пару словника - неіснючому ключу присвоюється значення: ss[4] = 'four'
 ss = {1: 'one', 2: 'two', 3: 'three'}
