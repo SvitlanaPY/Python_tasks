@@ -10,6 +10,7 @@
 # Далее, каждая запись содержит фамилию кандидата и число голосов, отданных за него в одном из штатов.
 # Подведите итоги выборов: для каждого из участника голосования определите число отданных за него голосов.
 # Участников нужно выводить в алфавитном порядке.
+
 # Inputs1:
 # 5
 # McCain 10
@@ -35,24 +36,24 @@
 # ivan 4
 # sergey 100000
 
-
 n = int(input())
 d = {}
 for i in range(n):
-    key, val = input().split()
-    d[key] = d.get(key, 0) + int(val)
-#    if key not in d:
-#        d[key] = int(val)
-#    else:
-#        d[key] = d[key] + int(val)
-for key in sorted(d.keys()):  # for key, val in sorted(d.items()):
-    print(key, d[key])  # print(key, val)
+   key, val = input().split()
+   d[key] = d.get(key, 0) + int(val)
+print("Dict: ", d)
+for key, val in sorted(d.items()):
+   print(key, val)
+
 
 # №2:
 # n = int(input())
 # d = {}
 # for i in range(n):
-#    key, val = input().split()
-#    d[key] = d.get(key, 0) + int(val)
-# for key, val in sorted(d.items()):
-#    print(key, val)
+#     key, val = input().split()
+#    if key not in d:
+#        d[key] = int(val)
+#    else:
+#        d[key] = d[key] + int(val)
+# for key in sorted(d.keys()):  # for key, val in sorted(d.items()):
+#     print(key, d[key])  # print(key, val)
