@@ -21,7 +21,6 @@
 # Все слова состоят только из маленьких латинских букв.
 # Переводы отсортированы в лексикографическом порядке.
 # Порядок следования английских слов в словаре также лексикографический.
-#
 # Выведите соответствующий данному латинско-английский словарь, в точности соблюдая формат входных данных.
 # В частности, первым должен идти перевод лексикографически минимального латинского слова,
 # далее — второго в этом порядке и т.д.
@@ -49,14 +48,37 @@ text = ''
 for i in range(n):
     text = input().split(' - ')
     text = [text[0]] + text[1].split(', ')
-#    key = text[0]
     eng_lat[text[0]] = eng_lat.get(text[0], []) + text[1:]
-
 for key, val in eng_lat.items():
     for word in val:
-#        key2 = word
         lat_eng[word] = lat_eng.get(word, []) + [key]
-
 print(len(lat_eng))
 for key, val in sorted(lat_eng.items()):
     print(key, '-', (', ').join(val))
+
+
+# РОЗБІР:
+# n = int(input())
+# eng_lat = {}
+# lat_eng = {}
+# text = ''
+# for i in range(n):
+#     text = input().split(' - ')
+#     # text = ['apple', 'malum, pomum, popula']
+#     # text[0] = 'apple';  text[1] = 'malum, pomum, popula's
+#     text = [text[0]] + text[1].split(', ')
+#     # text = ['apple', 'malum', 'pomum', 'popula']
+# #    key = text[0]
+#     eng_lat[text[0]] = eng_lat.get(text[0], []) + text[1:]
+# # eng_lat dict:  {'apple': ['malum', 'pomum', 'popula'], 'fruit': ['baca', 'bacca', 'popum'], 'punishment': ['malum', 'multa']}
+#
+# for key, val in eng_lat.items():
+#     # key: 'apple';  val: ['malum', 'pomum', 'popula']
+#     for word in val:
+#         # word: 'malum'
+# #        key2 = word
+#         lat_eng[word] = lat_eng.get(word, []) + [key]
+# # lat_eng dict: {'malum': ['apple', 'punishment'], 'pomum': ['apple'], 'popula': ['apple'], 'baca': ['fruit'], 'bacca': ['fruit'], 'popum': ['fruit'], 'multa': ['punishment']}
+#
+# for key, val in sorted(lat_eng.items()):
+#     print(key, '-', (', ').join(val))
