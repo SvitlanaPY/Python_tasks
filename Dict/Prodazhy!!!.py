@@ -35,7 +35,8 @@ while True:
         text = input()
     except (ValueError, EOFError):
         break
-
+print("dict: ", d)
+# dict:  {'Ivanov': {'paper': 17, 'marker': 3, 'envelope': 5}, 'Petrov': {'pens': 5, 'envelope': 20}}
 for name in sorted(d.keys()):
     print(name + ":")
     for product in sorted(d[name].keys()):
