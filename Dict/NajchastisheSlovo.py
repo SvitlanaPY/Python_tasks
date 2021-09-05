@@ -2,12 +2,13 @@
 # Дан текст: в первой строке задано число строк, далее идут сами строки.
 # Выведите слово, которое в этом тексте встречается чаще всего.
 # Если таких слов несколько, выведите то, которое меньше в лексикографическом порядке.
+#
 # Inputs1:
 # 1
 # apple orange banana banana orange
 # Outputs1:
 # banana
-
+#
 # Inputs2:
 # 2
 # taia ikm ikm ikm taia taia taia
@@ -22,25 +23,16 @@ for i in range(n):
     for word in text:
         d[word] = d.get(word, 0) + 1
 maxx = max(d.values())
+# print("Dict:  ", d)     # Dict:   {'apple': 1, 'orange': 2, 'banana': 2}
+# print("maxx= ", maxx)   # maxx=  2
 lst = []
 for word, d[word] in d.items():
     if d[word] == maxx:
         lst.append(word)
 lst.sort()
-print(lst[0])
+print(lst[0])    # = print(min(lst))
+
+
 # или
 #lst_new = sorted(lst)
 #print(lst_new[0])
-# или
-# print(min(lst))
-
-
-# print(d.keys())   # dict_keys(['orange','banana','apple'])
-# print(sorted(d.keys()))  # ['apple', 'banana', 'orange']
-
-# maxx = max(d.values())  # search for max value in dict: maxx = 2
-# print(maxx)
-# for word in sorted(d.keys()):   # sorting by keys: ['apple', 'banana', 'orange']
-#     if d[word] == maxx:
-#         print(word)
-#         break
