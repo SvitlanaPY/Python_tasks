@@ -36,7 +36,7 @@
 # jean
 # what
 # your
-
+#
 # Inputs2:
 # 2
 # iovjxotfvt h h iovjxotfvt h iovjxotfvt iovjxotfvt h
@@ -51,15 +51,15 @@ for i in range(n):
     text = input().split()
     for word in text:
         d[word] = d.get(word, 0) + 1
-# print(d)
+print("Dict: ", d)
 lst = []
 # lst1= []
 for key, val in d.items():
-    lst.append([-val, key])   # или lst.append((-val, key))
+    lst.append((-val, key))   # или lst.append([-val, key])
 #     lst1.append([val, key])
-# print(sorted(lst))
-# print(sorted(lst1, reverse = True))
+print("sorted(lst): ", sorted(lst))
+# print(sorted(lst1))
 lst_new = sorted(lst)   # или lst.sort()
-#print(lst_new)
+# print(lst_new)
 for i in lst_new:    # или for i in lst:
     print(i[1])
