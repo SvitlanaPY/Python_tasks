@@ -63,3 +63,35 @@ lst_new = sorted(lst)   # или lst.sort()
 # print(lst_new)
 for i in lst_new:    # или for i in lst:
     print(i[1])
+
+
+# "Маленький частотный анализ"
+# На вход программе подается текст.
+# Выведите слово (в нижнем регистре), которое встречается в тексте чаще всего,
+# и количество его появлений через пробел.
+# Гарантируется, что из знаков препинания встречаются только символы {",", ".", "?", "!"},
+# а также то, что в тексте есть только одно слово с наибольшей частотой появлений.
+#
+# Sample Input 1:
+# Корабли лавировали, лавировали, да не вылавировали
+# Sample Output 1:
+# лавировали 2
+#
+# Sample Input 2:
+# Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo
+# Sample Output 2:
+# buffalo 8
+
+text = input().lower()
+d = {}
+for i in ',.?!':
+    if i in text:
+        text = text.replace(i, '')
+text = text.split()
+d = {}
+for word in text:
+    d[word] = d.get(word, 0) + 1
+maxx = max(d.values())
+for key, val in d.items():
+    if val == maxx:
+        print(key, d[key])
