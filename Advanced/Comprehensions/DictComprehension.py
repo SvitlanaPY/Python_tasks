@@ -48,3 +48,4 @@ people = [
 ]
 phone_book = {person[1]: person[0] for person in people}
 print("dict 'phone_book': ", phone_book)   #  в качестве ключей хранится номера телефонов, а значениями есть имена владельцев
+

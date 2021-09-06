@@ -37,7 +37,7 @@ while True:
         break
 print("dict: ", d)
 # dict:  {'Ivanov': {'paper': 17, 'marker': 3, 'envelope': 5}, 'Petrov': {'pens': 5, 'envelope': 20}}
-for name in sorted(d.keys()):
+for name in sorted(d):    # обхід по ключах по замовчуванню, або можна писати: in sorted(d.keys())
     print(name + ":")
-    for product in sorted(d[name].keys()):
+    for product in sorted(d[name]):
         print(product, d[name][product])
