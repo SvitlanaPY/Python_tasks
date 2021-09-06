@@ -47,18 +47,19 @@ print("add str in set:", m)
 # add str in set: {2, 100, 76, 'ccccccc', 'hi', (9, 8), 54, 55}
 
 # редагування/ update:
+m = {2, 'hi', 100, 76, (9, 8), 54, 55, 'ccccccc'}
 m.update([99, 88])
-print("updated set:", m)
-# updated set: {2, 99, 100, 76, 'hi', (9, 8), 54, 55, 88}
+print("updated1 set:", m)
+# updated1 set: {2, 99, 100, 'hi', 76, (9, 8), 54, 55, 88, 'ccccccc'}
 m.update('bye')
 print("updated2 set:", m)
-# updated2 set: {'hi', 2, 99, 100, 76, 'y', (9, 8), 54, 55, 88, 'e', 'b'}
+# pdated2 set: {2, 99, 100, 'hi', 76, 'b', 'e', (9, 8), 54, 55, 88, 'y', 'ccccccc'}
 m.update(range(111, 115))
 print("updated3 set:", m)
-# updated3 set: {2, 99, 100, 'y', 'e', 76, 111, 'b', 112, 113, 114, (9, 8), 54, 55, 88, 'hi'}
+# updated3 set: {2, 99, 100, 'hi', 76, 'b', 'e', 111, 112, 113, 114, (9, 8), 54, 55, 88, 'y', 'ccccccc'}
 m.update({777777, 999999})
 print("updated4 set:", m)
-# updated4 set: {'hi', 2, 99, 100, 'b', 'e', 76, 111, 112, 113, 114, 'y', 777777, (9, 8), 54, 55, 88, 999999}
+# updated4 set: {2, 'hi', 76, 'b', 'e', (9, 8), 88, 'y', 'ccccccc', 99, 100, 111, 112, 113, 114, 777777, 54, 55, 999999}
 
 
 # видалення
@@ -141,4 +142,17 @@ t1 = t1.symmetric_difference(p1)
 t1.symmetric_difference_update(p1)
 print("tt=", tt, "   t1=",  t1)
 # tt= {1, 2, 3, 4}    t1= {1, 2, 7, 6, 5}
+
+# множини можна порівнювати
+tex1 = {1, 2, 3, 4}
+tex2 = {1, 2, 3, 4, 3, 4}
+print("? tex1=tex2: ", tex1 == tex2)   # True
+print("? tex1> tex2: ", tex1 > tex2)    # False
+print("? tex1 >= tex2: ", tex1 >= tex2)  # True
+
+
+tex11 = {1, 2, 3, 4}
+tex22 = {1, 2, 3}
+print("? tex11 > tex22: ", tex11 > tex22)   # True
+print("? tex22 < tex22: ", tex22 < tex11)   # True
 
