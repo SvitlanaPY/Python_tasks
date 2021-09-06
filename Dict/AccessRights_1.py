@@ -11,7 +11,7 @@
 # Вам требуется восстановить контроль над правами доступа к файлам
 # (ваша программа для каждого запроса должна будет возвращать OK если над файлом выполняется допустимая операция,
 # или же Access denied, если операция недопустима.
-
+#
 # Inputs1:
 # 4
 # helloworld.exe R X
@@ -49,6 +49,7 @@ for i in range(n):
     text = input().replace(' W', ' write').replace(' R', ' read').replace(' X', ' execute').split()
     key = text[0]
     files_permissions[key] = text[1:]
+
 m = int(input())
 for i in range(m):
     right, file = input().split()
