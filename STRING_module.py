@@ -10,3 +10,5 @@ print(ascii_uppercase)
 from string import ascii_lowercase
 print(ascii_lowercase)
 # abcdefghijklmnopqrstuvwxyz
+ascii_l = ascii_lowercase
+print("ascii_lowercase: ", ascii_l)
