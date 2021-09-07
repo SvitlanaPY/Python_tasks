@@ -49,7 +49,6 @@ for i in range(n):
     text = input().replace(' W', ' write').replace(' R', ' read').replace(' X', ' execute').split()
     key = text[0]
     files_permissions[key] = text[1:]
-
 m = int(input())
 for i in range(m):
     right, file = input().split()

@@ -29,3 +29,6 @@
 # Sample Output 2:
 # 3
 
+set_ = set(input().split())
+# length = len(set_)
+print(4 - len(set_))
