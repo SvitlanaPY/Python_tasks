@@ -156,3 +156,27 @@ tex22 = {1, 2, 3}
 print("? tex11 > tex22: ", tex11 > tex22)   # True
 print("? tex22 < tex22: ", tex22 < tex11)   # True
 
+# Example(1.1)
+# dict_ = {'Bill': set()}
+# while True:
+#     text = input()
+#     if text == 'q':
+#         break
+#     name, comments = text.split(': ')
+#     dict_[name].add(comments)
+
+
+# Example(1.2)
+# d = {}
+# while True:
+#     text = input()
+#     if text == 'q':
+#         break
+#     name, comments = text.split(': ')
+#     d[name] = d.get(name, set())
+#     print(d)
+#     print(d[name])
+#     d[name].add(comments)
+#     print(d)
+# print(d)
+
