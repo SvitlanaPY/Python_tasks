@@ -14,8 +14,8 @@ while True:
         break
     name, comments = text.split(': ')
     d[name] = d.get(name, set())
-    print(d)
-    print(d[name])
+    # print(d)
+    # print(d[name])
     d[name].add(comments)
-    print(d)
+    # print(d)
 print(d)

@@ -49,7 +49,9 @@ while True:
     if text == 'конец':
         break
     name, comment = text.split(': ')
-    dict_[name].add(comment)
+    dict_[name].add(comment)   # or:
+    # dict_[name] = d.get(name, set())
+    # dict_[name].add(comment)
 # print("dict_ ", dict_)
 
 # reversed_dict = {len(val): key for key, val in dict_.items()}
@@ -58,11 +60,8 @@ for key, val in dict_.items():
     reversed_dict[len(key)] = val
 # print("reversed_dict ", reversed_dict)
 
-for key, val in sorted(reversed_dict.items(), reverse=True):
-    print(f"Количество уникальных комментаторов у {val} - {key}")
-
-
-
+for k, v in sorted(reversed_dict.items(), reverse=True):
+    print(f"Количество уникальных комментаторов у {v} - {k}")
 
 
 # dict_[name] = dict_.get(name, []) + [comment]
