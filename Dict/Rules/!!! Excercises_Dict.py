@@ -6,6 +6,8 @@ person['firstName'] = str_[1]
 person['city'] = str_[2]
 person['University'] = str_[3]
 person['marks'] = []
+print(person)
+# person = {'lastName': 'Ivanov', 'firstName': 'Ivan', 'city': 'Samara', 'University': 'SGU', 'marks': []}
 for i in str_[4:]:
     person['marks'].append(int(i))
 print(person)
