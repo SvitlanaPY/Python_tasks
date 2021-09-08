@@ -38,3 +38,4 @@ def check_password(password):
 
 check_password("Q!werty1357")
 check_password("test1357")
+check_password(input("Enter password: "))
