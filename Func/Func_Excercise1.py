@@ -45,3 +45,16 @@ print(a)
 # 1
 # 2
 # hello
+
+
+def even(x):
+    if x % 2 == 0:
+        return True
+    return False
+
+# скорочений варіант ф-ії def even()
+# def even(x):
+#     return x % 2 == 0
+
+for i in range(1, 11):
+    print(i, even(i))
