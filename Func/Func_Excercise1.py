@@ -58,3 +58,16 @@ def even(x):
 
 for i in range(1, 11):
     print(i, even(i))
+
+# якщо return повертає кілька значень, то вони повернуться у вигляді КОРТЕЖУ:
+def sqrANDperymetr(a, b):
+    return a * b, 2 * (a + b)
+print(sqrANDperymetr(3, 6), type(sqrANDperymetr(2, 5)))
+# (18, 18) <class 'tuple'>
+
+square, perymetr = sqrANDperymetr(2, 5)
+print("square= ", square, "   perymetr= ", perymetr)
+# square=  10    perymetr=  14
+
+
+
