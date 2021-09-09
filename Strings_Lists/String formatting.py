@@ -4,7 +4,8 @@ int_aa = 77
 # Replace the placeholders with a value:
 # "Anna has ___ apples and ___ peaches."
 
-print()
+print('\n"".FORMAT()')
+# "".FORMAT()
 # 4. With .format and curly braces {}
 print("Anna has {1} apples and {0} peaches.".format(int_a, int_aa))
 # OUTPUT: Anna has 55 apples and 55 peaches.
@@ -36,14 +37,8 @@ print()
 print("Anna has {0:5} apples and {1:3} peaches.".format(1, 2))
 # OUTPUT: Anna has     1 apples and   2 peaches.
 
-print()
-# 9. With f-strings and variables
-apple = 11
-peach = "ten"
-print(f"Anna has {apple} apples and {peach} peaches.")
-# OUTPUT: Anna has 11 apples and ten peaches.
-
-print()
+print('\n% OPERATOR')
+# % OPERATOR
 # 10. With % operator
 green_apples = 'nine'
 ripe_peaches = 55
@@ -57,6 +52,14 @@ pch = "two"
 fruits_dict = {'one': app, 'two': pch}
 print("Anna has %(one)d apples and %(two)s peaches." % fruits_dict)
 # OUTPUT: Anna has 5 apples and two peaches.
+
+# F-STRING:
+print('\nF-STRINGS')
+# 9. With f-strings and variables
+apple = 11
+peach = "ten"
+print(f"Anna has {apple} apples and {peach} peaches.")
+# OUTPUT: Anna has 11 apples and ten peaches.
 
 print()
 # 12:
@@ -77,12 +80,12 @@ print(text3)
 
 print()
 # 14:
-d = {'name': 'Bob','mid_name': 'Smith','balance': 1500}
+d = {'name': 'Bob', 'mid_name': 'Smith', 'balance': 1500}
 text4 = f"Дорогий {d['name']} {d['mid_name']}, ваш виграш складає {d.get('balance')}грн."
 print(text4)   # Дорогий Bob Smith, ваш виграш складає 1500грн.
 text5 = f"Шановний {d['name']} {d['mid_name']}, ваш виграш складає {d.get('bal')} грн."
 print(text5)   # Шановний Bob Smith, ваш виграш складає None грн.
-text6 = f"Дорогий {d['name']} {d['mid_name']}, ваш виграш складає {d.get(('bal'),0)} грн."
+text6 = f"Дорогий {d['name']} {d['mid_name']}, ваш виграш складає {d.get(('bal'), 0)} грн."
 print(text6)    # Дорогий Bob Smith, ваш виграш складає 0 грн.
 
 # print()
@@ -95,6 +98,7 @@ print(text6)    # Дорогий Bob Smith, ваш виграш складає 0
 #     ['Jeck', 'Johnson', 2000]
 #     ['Diana', 'Smith', 3000]
 
+
 print()
 # 15:
 lst = [
@@ -104,6 +108,7 @@ for name, midname, balance in lst:
     # print(name, midname, balance)
     text7 = f"Dear {name} {midname}, you have {balance}$"
     print(text7)
+
 
 print()
 # 16:
@@ -115,6 +120,7 @@ for name, midname, balance, sex in lst_t:
     # print(name, midname, balance)
     text8 = f"{gender[sex]} {name} {midname}, у вас {balance}$ бонусів"
     print(text8)
+
 
 print()
 # 17: Необходимо вывести результат трех видов деления первого числа на второе в определенном формате

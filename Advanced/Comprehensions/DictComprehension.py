@@ -9,12 +9,14 @@ print("dict 'aa': ", aa)
 # dict 'aa':  {'hello': 5, 'hi': 2, 'bye': 3}
 
 
+
+print()
 # забрати зі слів всі великі букви окрім перших, перевести строку з цифр у integer
 data = {'Джеф БеЗос': '177',
         'Ілон Маск': '126',
         'БерНар АрнО': '150',
         'БілЛ ГеЙтС': '124'}
-new_data = {key.title(): int(val) for key,val in data.items()}
+new_data = {key.title(): int(val) for key, val in data.items()}
 print("dict 'new_data': ", new_data)
 # dict 'new_data':  {'Джеф Безос': 177, 'Ілон Маск': 126, 'Бернар Арно': 150, 'Білл Гейтс': 124}
 
@@ -25,6 +27,19 @@ print("dict 'new_data2': ", new_data2)
 # dict 'new_data2':  {'Джеф Безос': 177, 'Ілон Маск': 126, 'Бернар Арно': 150, 'Білл Гейтс': 124}
 
 
+
+print()
+lst_ = [("a", "b"), ("aa", "bb"), ("aaa", "bbb")]
+dict_comprehension1 = {i[0]: i[1] for i in lst_}
+print("dict_comprehension1: ", dict_comprehension1)
+# dict_comprehension:  {'a': 'b', 'aa': 'bb', 'aaa': 'bbb'}
+
+dict_comprehension2 = {k: v for k, v in lst_}
+print("dict_comprehension2: ", dict_comprehension2)
+# dict_comprehension2:  {'a': 'b', 'aa': 'bb', 'aaa': 'bbb'}
+
+
+print()
 # робимо словник юзерів, де ключами будуть id, а значеннями - список із імені користувача та пароля
 users = [
     [10, 'Bob', 'password'],
@@ -38,6 +53,7 @@ print("dict 'new_users': ", new_users)
 # dict 'new_users':  {10: ['Bob', 'password'], 11: ['Tom', 'python'], 12: ['John', 'overflow'], 13: ['Stas', 'pwd312'], 151: ['Andrew', 'qwerty123']}
 
 
+print()
 people = [
     ['Amy Smith', '694.322.8133x22426'],
     ['Brian Shaw', '593.662.5217x338'],
@@ -47,5 +63,5 @@ people = [
     ['Joshua Willis', '+1-978-530-6971x601']
 ]
 phone_book = {person[1]: person[0] for person in people}
-print("dict 'phone_book': ", phone_book)   #  в качестве ключей хранится номера телефонов, а значениями есть имена владельцев
-
+print("dict 'phone_book': ", phone_book)
+#  в качестве ключей хранится номера телефонов, а значениями есть имена владельцев
