@@ -60,3 +60,13 @@ print(sorted(ss, key=lambda x: int(x.split()[1])))
 sss = ['ZZZ 800', 'aaa 45', 'eee 43', 'ddd 800', 'BBB 43', 'www 14']
 print(sorted(sss, key=lambda x: (int(x.split()[1]), x.split()[0].lower())))
 # ['www 14', 'BBB 43', 'eee 43', 'aaa 45', 'ddd 800', 'ZZZ 800']
+
+
+lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
+# 20. Sort lst_to_sort from min to max
+print(sorted(lst_to_sort))
+# OUTPUT: [1, 5, 13, 15, 18, 24, 33, 55]
+
+# 21. Sort lst_to_sort from max to min
+print(sorted(lst_to_sort, reverse=True))
+# OUTPUT: [55, 33, 24, 18, 15, 13, 5, 1]

@@ -1,4 +1,4 @@
-# LAMBDA structure
+# lambda argument1, argument2, ... : expression
 # lambda-operator may have an arbitrary number of arguments, but only one expression.
 # Syntax - lambda arguments : expression
 
@@ -51,4 +51,3 @@ def linear(k, b):
 graph1 = linear(2, 5)   # k = 2, b = 5
 print(graph1(3))   # x = 3
 # y = 2 * 3 + 5
-

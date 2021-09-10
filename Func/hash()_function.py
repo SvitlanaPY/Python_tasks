@@ -1,4 +1,4 @@
-# hash() method to encode the data into unrecognisable value (for immutable objects)
+# hash() method to encode the data into unrecognisable value (applied for immutable objects)
 int_val = 4
 str_val = 'Test'
 flt_val = 24.56
@@ -10,7 +10,7 @@ print("bytes_value: ", bytes_value)   # bytes_value:  b'\x00\x00\x00\x00'
 complex_value = complex(2, -3)
 print("complex_value: ", complex_value)   # complex_value:  (2-3j)
 
-
+print()
 print("The integer hash value is : ", hash(int_val))
 # The integer hash value is : 4
 print("The string hash value is : ", hash(str_val))
