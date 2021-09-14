@@ -20,8 +20,11 @@ def longest_word_in_file(file_name):
                 max_word = word_wo_punct
     return max_word
 
+from string import punctuation
+print("punctuation: ", punctuation)
+print("type punctuation: ", type(punctuation))
+
 def remove_punct(word):
-    from string import punctuation
     for punc in punctuation:
         if punc in word:
             word = word.replace(punc, '')

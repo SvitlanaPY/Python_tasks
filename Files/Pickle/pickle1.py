@@ -1,4 +1,5 @@
 import pickle
+# модуль для серилізації/десирилізації Python-об"єктів в двійковому форматі
 
 # DUMPS (convert our list/str/dict... into byte-string)
 list_111 = [1, 2, 3, 4, 5]
@@ -11,8 +12,11 @@ list_obj = pickle.loads(byte_data)
 print(type(list_obj))   # <class 'list'>
 print(list_obj)   # [1, 2, 3, 4, 5]
 
+
+
 # ---------------------------------------------- #
 # DUMP (save our converted list as byte-str into file "file_list1")
+list_111 = [1, 2, 3, 4, 5]
 file = open("file_list1", "wb")
 pickle.dump(list_111, file)
 # print(type(file))   # <class '_io.BufferedWriter'>
@@ -30,3 +34,21 @@ print(type(byte_obj))   # <class 'list'>
 print(byte_obj)   # [1, 2, 3, 4, 5]
 file.close()
 
+
+
+
+# DUMP / LOAD
+print()
+data = {
+    'a': [1, 2.0, 3],
+    'b': ("hello", "hi", "bye"),
+    'c': {None, True, False}
+}
+with open("data_pickle", "wb") as f:
+    pickle.dump(data, f)
+
+# LOAD
+with open("data_pickle", "rb") as ff:
+    data_new = pickle.load(ff)
+print("data_new: ", data_new)
+# data_new:  {'a': [1, 2.0, 3], 'b': ('hello', 'hi', 'bye'), 'c': {False, None, True}}

@@ -16,3 +16,7 @@ print(ascii_lowercase)
 ascii_l = ascii_lowercase
 print("ascii_lowercase: ", ascii_l)
 # ascii_lowercase:  abcdefghijklmnopqrstuvwxyz
+
+
+from string import punctuation
+print("punctuation: ", punctuation)
