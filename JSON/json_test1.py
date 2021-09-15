@@ -36,4 +36,5 @@ str_json = """
 """
 
 data = json.loads(str_json)
+print(type(data))   # <class 'dict'>
 print(data)

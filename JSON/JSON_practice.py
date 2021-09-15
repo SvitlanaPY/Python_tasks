@@ -16,7 +16,7 @@ str_json = """
         "phoneNumber": "123456",
         "emailAddress": "krish.lee@learningcontainer.com"
     }, {
-        "userId": "devid",
+        "userId": "Devid",
         "jobTitle": "Developer",
         "firstName": "Devid",
         "lastName": "Rome",
@@ -27,7 +27,7 @@ str_json = """
     }, {
         "userId": "tin",
         "jobTitle": "Program Manager",
-        "firstName": "tin",
+        "firstName": "Tin",
         "lastName": "jonson",
         "employeeCode": "E3",
         "region": "CA",
@@ -41,7 +41,8 @@ str_json = """
 print("str_json:", str_json)   # строка 'str_json' у форматі json
 print("type 'str_json'=", type(str_json))   # <class 'str'>
 
-data = json.loads(str_json)   # зчитує строку 'str_json' у форматі .json і конвертує у python-об"єкт data (у нашому випадку це буде <class 'dict'>)
+data = json.loads(str_json)   # зчитує строку 'str_json' у форматі .json і конвертує у python-об"єкт data
+# (у нашому випадку це буде <class 'dict'>)
 print("type 'data'=", type(data))   # <class 'dict'>
 
 print('Словник data =', data)
@@ -49,6 +50,12 @@ print('----------------------------')
 print()
 
 
+print("data['response']['users']: ", type(data['response']['users']))   # <class 'list'>
+for elem in data['response']['users']:
+    print("elem in data['response']['users']: ", elem['firstName'], elem['lastName'])
+
+
+print()
 #####   ПРАЦЮЄМО ТЕПЕР З 'data' - ЯКИЙ Є СЛОВНИКОМ в python і редагуємо його   #####
 print('del employeeCode and add likes and userAge:')
 print('ALL USERS:', data['response']['users'])
@@ -61,13 +68,13 @@ for elem in data['response']['users']:
     print("Словник 'data' з 'LIKES'=", data['response']['users'])
     elem['userAge'] = randint(18, 65)
     print("Словник 'data' з 'userAge'=", data['response']['users'])
-    elem['date_now'] = datetime.now().strftime('%d/%m/%y')
+    elem['date_now'] = datetime.now().strftime('%d/%m/%y')   # %d перша буква від day, / розділювач
     print("Словник 'data' з 'date_now'=", data['response']['users'])
     elem['canAccess'] = True
     elem['Null_None'] = None
 
 print('++++++++++++++++++++++++++++++++')
-print('Словник data після редагування', data['response']['users'])
+print('Словник data після редагування', data)
 print()
 
 
