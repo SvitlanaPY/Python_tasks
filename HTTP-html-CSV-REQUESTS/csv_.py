@@ -1,4 +1,5 @@
 import csv
+#  csv - текстовий формат для табличних даних
 
 with open("csv_data.csv") as f:
     reader = csv.reader(f)
@@ -26,6 +27,7 @@ with open("tsv_data.tsv") as f_f:
 
 # with open("csv_data.csv", "a") as fff:
 #     writer = csv.writer(fff, quoting=csv.QUOTE_NONNUMERIC)   # open file to check it
+#     # друга назва у QUOTE каже, що саме поміщати в ліпки: QUOTE_NONNUMERIC - всі НЕчислові значення поміщати в лапки
 #     writer = csv.writer(fff, quoting=csv.QUOTE_ALL)   # open file to check it
 #     writer.writerows(students)
 #

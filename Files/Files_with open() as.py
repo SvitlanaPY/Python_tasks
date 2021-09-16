@@ -1,9 +1,10 @@
-# print("Ex1")
-# ff = open("test_1.txt", "w")
-# lines = ["Line1", "Line2", "Line3"]
-# contents = "\n".join(lines)
-# ff.write(contents)
-# ff.close()
+print("Ex1")
+ff = open("test_lines.txt", "w")
+lines = ["Line1", "Line2", "Line3"]
+contents = "\n".join(lines)
+ff.write(contents)
+# ff.write(str(lines))
+ff.close()
 #
 # with open("test_1.txt") as qqq, open("test_1_copy.txt", "w") as sss:
 #     for line in qqq:
