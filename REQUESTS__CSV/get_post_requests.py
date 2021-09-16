@@ -2,10 +2,10 @@
 import requests
 
 # defining the api-endpoint
-API_ENDPOINT = "http://pastebin.com/api/api_post.php"
-
+# API_ENDPOINT = "http://pastebin.com/api/api_post.php"
+API_ENDPOINT = "https://pastebin.com/api/api_post.php"
 # your API key here
-API_KEY = "x6yxgDXsMrYZdPqVCKKSYkR5DjAVy"
+API_KEY = "x6yxgDXsMrYZdPqVCKKSYkR5DjAVy-op"
 
 # your source code here
 source_code = '''
@@ -24,10 +24,12 @@ data = {'api_dev_key': API_KEY,
 		'api_paste_format':'python'}
 
 # sending post request and saving response as response object
-r = requests.post(url = API_ENDPOINT, data = data)
+r = requests.post(url = API_ENDPOINT, data=data)
 
 # extracting response text
 pastebin_url = r.text
 print(pastebin_url)
 print("The pastebin URL is:%s" % pastebin_url)
+print("HEADERS: ", r.headers)
+print(r.status_code)
 
