@@ -1,9 +1,6 @@
 # importing the requests library
 import requests
 
-# importing the requests library
-import requests
-
 # defining the api-endpoint
 API_ENDPOINT = "http://pastebin.com/api/api_post.php"
 
@@ -19,17 +16,18 @@ print(a + b)
 '''
 
 # data to be sent to api
-data = {'api_dev_key':API_KEY,
+data = {'api_dev_key': API_KEY,
 		'api_user_key': '',
 		'api_results_limit': 100,
 		'api_option':'paste',
-		'api_paste_code':source_code,
+		'api_paste_code': source_code,
 		'api_paste_format':'python'}
 
 # sending post request and saving response as response object
-r = requests.get(url = API_ENDPOINT, data = data)
+r = requests.post(url = API_ENDPOINT, data = data)
 
 # extracting response text
 pastebin_url = r.text
-print("The pastebin URL is:%s"%pastebin_url)
+print(pastebin_url)
+print("The pastebin URL is:%s" % pastebin_url)
 
