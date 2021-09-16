@@ -12,12 +12,12 @@ print("#1: ", b)
 # #1:  [14, 79, 645, 7952, 18, 192, 471]
 
 
-b = list(filter(lambda x: x>9 and x<100, a))
+b = list(filter(lambda x: 9 < x < 100, a))
 print("#2: ", b)
 # #2:  [14, 79, 18]
 
 
-b = list(filter(lambda x: x>0 and x<10, range(1, 20)))
+b = list(filter(lambda x: 0 < x < 10, range(1, 20)))
 print("#3: ", b)
 # #3:  [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -25,6 +25,7 @@ print("#3: ", b)
 b = list(filter(bool, [14, 0, 5, '', 0, 7952, 0, 8, 192, [], 471]))
 print("#4: ", b)
 # #4:  [14, 5, 79, 7952, 8, 192, 471]
+
 
 b = list(filter(lambda x: len(x) > 5, ['hello', 'hi', 'bye', 'potato', 'carrot', 'world']))
 print("#5: ", b)

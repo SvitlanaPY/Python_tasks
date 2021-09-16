@@ -19,6 +19,7 @@ with open("Alphabet.json", "r", encoding="utf-8") as file, open("Abracadabra.txt
             # print(letter)
     new_file.write(new_text)
     print(new_text)
+    # print(type(new_text))
     # print(repr(new_text))
 
 
@@ -26,3 +27,5 @@ with open("Alphabet.json", "r", encoding="utf-8") as file, open("Abracadabra.txt
 # print(type(data))
 # print(text)
 # print(type(text))
+
+
