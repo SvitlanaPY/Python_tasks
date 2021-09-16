@@ -6,6 +6,7 @@ import requests
 # res = requests.get('https://api.github.com/users/naveenkrnl')
 
 response_ = requests.get('https://api.github.com/events')
+
 print(type(response_))   # <class 'requests.models.Response'>; Мы получили объект Response с именем response_
 
 pprint.pprint(dir(response_))   # всі доступні атрибути response-object-a
