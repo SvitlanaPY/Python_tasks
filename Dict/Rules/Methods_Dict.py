@@ -118,3 +118,4 @@ for para in person.items():
 print()
 for para in person.items():
     print(para[0], '-', para[1])
+# print(person.items())
