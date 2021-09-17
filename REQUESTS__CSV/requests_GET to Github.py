@@ -6,10 +6,9 @@ import requests
 # res = requests.get('https://api.github.com/users/naveenkrnl')
 
 response_ = requests.get('https://api.github.com/events')
+print(type(response_))   # <class 'requests.models.Response'>; Мы получили объект класу Response с именем response_
 
-print(type(response_))   # <class 'requests.models.Response'>; Мы получили объект Response с именем response_
-
-pprint.pprint(dir(response_))   # всі доступні атрибути response-object-a
+pprint.pprint(dir(response_))   # всі доступні атрибути response_-object-a
 # ['__attrs__',
 #  '__bool__',
 #  '__class__',
@@ -83,18 +82,19 @@ print("status_code: ", response_.status_code)
 # print requested url
 print("url: ", response_.url)
 
-# print content of request
-# print(response_.content)
-print("content in text format: ", response_.text)
-
-with open("python_requests", 'w') as f:
-    f.write(response_.text)
-
-data = response_.json()
-print(data)
-print(type(data))   # <class 'list'>
-
+# To see the content of request:
 # Свойство text показывает тело ответа сервера в текстовом формате (актуально для html-страниц),
 # content – результат в виде байтов (удобно при скачивании графической, аудио- или видеоинформации),
 # метод json() приводит содержимое ответа к обычному словарю
 # (если данные к нему приводимы, в противном случае будет ошибка; актуально для API-запросов).
+
+print("content in text format: ", response_.text)   # text info; показывает тело ответа сервера в текстовом формате
+# write text content into file:
+with open("python_requests", 'w') as f:
+    f.write(response_.text)
+
+print(response_.content)   # binary info; результат (тело ответа сервера) в виде байтов
+
+data = response_.json()   # метод json() приводит содержимое ответа к обычному словарю(если данные к нему приводимы)
+print(data)
+print(type(data))   # <class 'list'>

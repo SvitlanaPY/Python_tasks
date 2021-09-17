@@ -32,4 +32,3 @@ print(pastebin_url)
 print("The pastebin URL is:%s" % pastebin_url)
 print("HEADERS: ", r.headers)
 print(r.status_code)
-
