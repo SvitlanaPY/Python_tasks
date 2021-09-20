@@ -1,0 +1,231 @@
+{
+    "total_count": null,
+    "_links": {
+        "self": {
+            "href": "https://api.artsy.net/api/artists"
+        },
+        "next": {
+            "href": "https://api.artsy.net/api/artists?cursor=0331s%3A57c80944b202a36609000082"
+        }
+    },
+    "_embedded": {
+        "artists": [
+            {
+                "id": "5723c839139b2113a8000619",
+                "slug": "artist",
+                "created_at": "2016-04-29T20:46:49+00:00",
+                "updated_at": "2019-09-03T06:55:55+00:00",
+                "name": "\"",
+                "sortable_name": "\"",
+                "gender": null,
+                "biography": "",
+                "birthday": "",
+                "deathday": "",
+                "hometown": "",
+                "location": "",
+                "nationality": "",
+                "_links": {
+                    "self": {
+                        "href": "https://api.artsy.net/api/artists/5723c839139b2113a8000619"
+                    },
+                    "permalink": {
+                        "href": "https://www.artsy.net/artist/artist"
+                    },
+                    "artworks": {
+                        "href": "https://api.artsy.net/api/artworks?artist_id=5723c839139b2113a8000619"
+                    },
+                    "published_artworks": {
+                        "href": "https://api.artsy.net/api/artworks?artist_id=5723c839139b2113a8000619&published=true"
+                    },
+                    "similar_artists": {
+                        "href": "https://api.artsy.net/api/artists?similar_to_artist_id=5723c839139b2113a8000619"
+                    },
+                    "similar_contemporary_artists": {
+                        "href": "https://api.artsy.net/api/artists?similar_to_artist_id=5723c839139b2113a8000619&similarity_type=contemporary"
+                    },
+                    "genes": {
+                        "href": "https://api.artsy.net/api/genes?artist_id=5723c839139b2113a8000619"
+                    }
+                }
+            },
+            {
+                "id": "5723c909cd530e192700078c",
+                "slug": null,
+                "created_at": "2016-04-29T20:50:17+00:00",
+                "updated_at": "2016-12-21T00:33:12+00:00",
+                "name": "\"",
+                "sortable_name": "\"",
+                "gender": null,
+                "biography": "",
+                "birthday": "",
+                "deathday": "",
+                "hometown": "",
+                "location": "",
+                "nationality": "",
+                "_links": {
+                    "self": {
+                        "href": "https://api.artsy.net/api/artists/5723c909cd530e192700078c"
+                    },
+                    "permalink": {
+                        "href": "https://www.artsy.net/artist/"
+                    },
+                    "artworks": {
+                        "href": "https://api.artsy.net/api/artworks?artist_id=5723c909cd530e192700078c"
+                    },
+                    "published_artworks": {
+                        "href": "https://api.artsy.net/api/artworks?artist_id=5723c909cd530e192700078c&published=true"
+                    },
+                    "similar_artists": {
+                        "href": "https://api.artsy.net/api/artists?similar_to_artist_id=5723c909cd530e192700078c"
+                    },
+                    "similar_contemporary_artists": {
+                        "href": "https://api.artsy.net/api/artists?similar_to_artist_id=5723c909cd530e192700078c&similarity_type=contemporary"
+                    },
+                    "genes": {
+                        "href": "https://api.artsy.net/api/genes?artist_id=5723c909cd530e192700078c"
+                    }
+                }
+            },
+            {
+                "id": "5f3c6a447b13bc00131ed83c",
+                "slug": "5f3c6a447b13bc00131ed83c",
+                "created_at": "2020-08-18T23:54:45+00:00",
+                "updated_at": "2020-08-18T23:54:45+00:00",
+                "name": ".",
+                "sortable_name": ".",
+                "gender": "n/a",
+                "biography": "",
+                "birthday": "",
+                "deathday": "",
+                "hometown": "",
+                "location": "",
+                "nationality": "",
+                "_links": {
+                    "self": {
+                        "href": "https://api.artsy.net/api/artists/5f3c6a447b13bc00131ed83c"
+                    },
+                    "permalink": {
+                        "href": "https://www.artsy.net/artist/5f3c6a447b13bc00131ed83c"
+                    },
+                    "artworks": {
+                        "href": "https://api.artsy.net/api/artworks?artist_id=5f3c6a447b13bc00131ed83c"
+                    },
+                    "published_artworks": {
+                        "href": "https://api.artsy.net/api/artworks?artist_id=5f3c6a447b13bc00131ed83c&published=true"
+                    },
+                    "similar_artists": {
+                        "href": "https://api.artsy.net/api/artists?similar_to_artist_id=5f3c6a447b13bc00131ed83c"
+                    },
+                    "similar_contemporary_artists": {
+                        "href": "https://api.artsy.net/api/artists?similar_to_artist_id=5f3c6a447b13bc00131ed83c&similarity_type=contemporary"
+                    },
+                    "genes": {
+                        "href": "https://api.artsy.net/api/genes?artist_id=5f3c6a447b13bc00131ed83c"
+                    }
+                }
+            },
+            {
+                "id": "5f7e5561b6dbb4000d6316bc",
+                "slug": "00100011-hashtag",
+                "created_at": "2020-10-07T23:55:13+00:00",
+                "updated_at": "2021-08-05T12:04:47+00:00",
+                "name": "00100011 [Hashtag]",
+                "sortable_name": "00100011 [Hashtag]",
+                "gender": null,
+                "biography": "",
+                "birthday": "",
+                "deathday": "",
+                "hometown": "",
+                "location": "",
+                "nationality": "",
+                "image_versions": [
+                    "square",
+                    "four_thirds",
+                    "tall",
+                    "large"
+                ],
+                "_links": {
+                    "thumbnail": {
+                        "href": "https://d32dm0rphc51dk.cloudfront.net/QYaZG81lG_POkocw0g3XcA/square.jpg"
+                    },
+                    "image": {
+                        "href": "https://d32dm0rphc51dk.cloudfront.net/QYaZG81lG_POkocw0g3XcA/{image_version}.jpg",
+                        "templated": true
+                    },
+                    "self": {
+                        "href": "https://api.artsy.net/api/artists/5f7e5561b6dbb4000d6316bc"
+                    },
+                    "permalink": {
+                        "href": "https://www.artsy.net/artist/00100011-hashtag"
+                    },
+                    "artworks": {
+                        "href": "https://api.artsy.net/api/artworks?artist_id=5f7e5561b6dbb4000d6316bc"
+                    },
+                    "published_artworks": {
+                        "href": "https://api.artsy.net/api/artworks?artist_id=5f7e5561b6dbb4000d6316bc&published=true"
+                    },
+                    "similar_artists": {
+                        "href": "https://api.artsy.net/api/artists?similar_to_artist_id=5f7e5561b6dbb4000d6316bc"
+                    },
+                    "similar_contemporary_artists": {
+                        "href": "https://api.artsy.net/api/artists?similar_to_artist_id=5f7e5561b6dbb4000d6316bc&similarity_type=contemporary"
+                    },
+                    "genes": {
+                        "href": "https://api.artsy.net/api/genes?artist_id=5f7e5561b6dbb4000d6316bc"
+                    }
+                }
+            },
+            {
+                "id": "57c80944b202a36609000082",
+                "slug": "0331s",
+                "created_at": "2016-09-01T10:56:04+00:00",
+                "updated_at": "2019-09-20T13:38:56+00:00",
+                "name": "0331\u0441",
+                "sortable_name": "0331\u0441",
+                "gender": "male",
+                "biography": "",
+                "birthday": "",
+                "deathday": "",
+                "hometown": "Moscow, Russia",
+                "location": "Moscow, Russia",
+                "nationality": "Russian",
+                "image_versions": [
+                    "square",
+                    "tall",
+                    "large",
+                    "four_thirds"
+                ],
+                "_links": {
+                    "thumbnail": {
+                        "href": "https://d32dm0rphc51dk.cloudfront.net/iZ_5gDnoT_QSIybOFZdv9w/square.jpg"
+                    },
+                    "image": {
+                        "href": "https://d32dm0rphc51dk.cloudfront.net/iZ_5gDnoT_QSIybOFZdv9w/{image_version}.jpg",
+                        "templated": true
+                    },
+                    "self": {
+                        "href": "https://api.artsy.net/api/artists/57c80944b202a36609000082"
+                    },
+                    "permalink": {
+                        "href": "https://www.artsy.net/artist/0331s"
+                    },
+                    "artworks": {
+                        "href": "https://api.artsy.net/api/artworks?artist_id=57c80944b202a36609000082"
+                    },
+                    "published_artworks": {
+                        "href": "https://api.artsy.net/api/artworks?artist_id=57c80944b202a36609000082&published=true"
+                    },
+                    "similar_artists": {
+                        "href": "https://api.artsy.net/api/artists?similar_to_artist_id=57c80944b202a36609000082"
+                    },
+                    "similar_contemporary_artists": {
+                        "href": "https://api.artsy.net/api/artists?similar_to_artist_id=57c80944b202a36609000082&similarity_type=contemporary"
+                    },
+                    "genes": {
+                        "href": "https://api.artsy.net/api/genes?artist_id=57c80944b202a36609000082"
+                    }
+                }
+            }
+        ]
+    }
+}

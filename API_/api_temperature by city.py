@@ -6,7 +6,8 @@ api_url = "https://api.openweathermap.org/data/2.5/weather"
 parameters = {
     'q': city,
     'appid': 'f003dd12f2976bc2cf3789bd7e5f9354',
-    'units': 'metric'
+    'units': 'metric',
+    'lang': 'ua'
 }
 
 res = requests.get(api_url, params=parameters)

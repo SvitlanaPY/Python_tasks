@@ -2,7 +2,7 @@ import Module_
 
 print("File")
 print("Call outside the module. Sum=", Module_.sum(4, 6))
-print(__name__)
+print("__name__: ", __name__)
 
 
 # or

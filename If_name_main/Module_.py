@@ -8,8 +8,8 @@ def sum(a, b):
 
 
 # все нижче (що іде після описово блоку) є основним кодом програми
+print("__name__: ", __name__)
 print("Modele code")
-print(__name__)
 print("Sum from main code in Module: ", sum(1, 2))
 
 if __name__ == "__main__":

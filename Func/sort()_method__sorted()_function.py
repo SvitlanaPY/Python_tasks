@@ -73,9 +73,11 @@ print(sorted(sss, key=lambda x: (int(x.split()[1]), x.split()[0].lower())))
 
 print()
 # !!!!!!! сортування словника по ключу і значенню одночасно:
-dict_artist = {'Colorado': 'Rockies', 'Boston': 'Red Sox', 'Minnesota': 'Twins', 'Milwaukee': 'Brewers', 'Kansas City': 'Royals'}
+dict_artist = {'Colorado': 1230, 'Boston': 1400, 'Minnesota': 2000, 'Milwaukee': 1400, 'Kansas City': 1400}
+# dict_artist = {'Colorado': 'Rockies', 'Boston': 'Red Sox', 'Minnesota': 'Twins', 'Milwaukee': 'Brewers', 'Kansas City': 'Royals'}
 print(sorted(dict_artist.items(), key=lambda x: (x[1], x[0])))      # - На выходе имеем list из кортежей
-# dict_artist_new:   [('Milwaukee', 'Brewers'), ('Boston', 'Red Sox'), ('Colorado', 'Rockies'), ('Kansas City', 'Royals'), ('Minnesota', 'Twins')]
+# [('Colorado', 1230), ('Boston', 1400), ('Kansas City', 1400), ('Milwaukee', 1400), ('Minnesota', 2000)]
+# [('Milwaukee', 'Brewers'), ('Boston', 'Red Sox'), ('Colorado', 'Rockies'), ('Kansas City', 'Royals'), ('Minnesota', 'Twins')]
 
 
 print()
