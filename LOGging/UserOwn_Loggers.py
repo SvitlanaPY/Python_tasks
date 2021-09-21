@@ -1,6 +1,6 @@
 import logging
 # Create a custom logger
-my_logger = logging.getLogger(name)
+my_logger = logging.getLogger(<name>)
 
 # Create handlers
 c_handler = logging.StreamHandler()
