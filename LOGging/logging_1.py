@@ -88,13 +88,13 @@ print()
 # basicConfig() перевіряє у root-логера наявність хендлерів, закріплених за root-логером,
 # і якщо немає, то basicConfig() створює хендлер класу StreamHandler і закріплює його за root-логером.
 # передаючи в basicConfig() аргумент filename, ми змінимо тип хендлера на FileHandler.
-
 # викликаємо ф-ію basicConfig():
 # logging.basicConfig(level='DEBUG', filename="mylog.log", filemode='a')
 # або
 # logging.basicConfig(level=logging.DEBUG, filename="mylog.log", filemode='a')
 # або
 # logging.basicConfig(level=10, filename="mylog.log", filemode='a')
+# level - рівень повідомлень root-логера, а передаючи filename ми вказуємо хендлеру виводити повідомлення у файл.
 # print("my_logger.handlers: ", my_logger.handlers)
 # [<FileHandler /home/svitlana/Projects/Python_Tasks/LOGging/mylog.log (NOTSET)>]
 
@@ -102,9 +102,7 @@ print()
 def main(name):
     my_logger.warning(f"Enter in the main() function: name = {name}")
 #   у момент виклику метода warning(), логер створив екземпляр класу LogRecord
-
 # DEBUG:root:Enter in the main() function: name = oleg   # root - імя дефолтного логера
-
 
 if __name__ == '__main__':
     main('oleg')
