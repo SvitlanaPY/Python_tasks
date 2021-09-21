@@ -39,6 +39,8 @@ d = {}
 for _ in range(n):
     name, date, month = input().split()
     d[month] = d.get(month, []) + [name]
+print(d)
+# d: {'июн': ['Артем'], 'янв': ['Саша', 'Карл'], 'июл': ['Коля']}
 m = int(input())
 for _ in range(m):
     word = input()
