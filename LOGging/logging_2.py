@@ -1,4 +1,3 @@
-import pprint
 import logging
 
 
@@ -10,26 +9,19 @@ my_logger = logging.getLogger()
 print("my_logger: ", my_logger)
 # my_logger:  <RootLogger root (DEBUG)>
 print()
-
-
 print("my_logger.level: ", my_logger.level)
 # my_logger.level:  10
-
-
 print()
 print("my_logger.handlers: ", my_logger.handlers)
 # my_logger.handlers:  [<StreamHandler <stderr> (NOTSET)>]
-
-
+print()
 # logging.basicConfig(level='DEBUG', filename='mylog.log')
 # print("my_logger.handlers: ", my_logger.handlers)
 # [<FileHandler /home/svitlana/Projects/Python_Tasks/LOGging/mylog.log (NOTSET)>]
 
 
-
 def main(name):
     my_logger.debug(f"Enter in the main() function: name = {name}")
-
 # DEBUG:root:Enter in the main() function: name = oleg   # root - імя дефолтного логера
 
 
