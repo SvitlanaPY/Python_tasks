@@ -63,18 +63,17 @@ def get_names_page(names_list):
 
 names_list = ["Misha", "Olya", "Vitaliy", "Vita"]
 print(get_names_page(names_list))
-
-<html>
-<head>
-<title>Users</title>
-</head>
-</body>
-<div class=users_block>
-<h3> User names: </h3>
-<p> Misha </p>
-<p> Olya </p>
-<p> Vitaliy </p>
-<p> Vita </p>
-</div>
-</body>
-<html>
+# <html>
+# <head>
+# <title>Users</title>
+# </head>
+# </body>
+# <div class=users_block>
+# <h3> User names: </h3>
+# <p> Misha </p>
+# <p> Olya </p>
+# <p> Vitaliy </p>
+# <p> Vita </p>
+# </div>
+# </body>
+# <html>

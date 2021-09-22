@@ -1,4 +1,5 @@
-#Zamykannya - when our inner function uses variables not defined whithin inner function
+# Zamykannya - when our inner function uses variables not defined whithin inner function
+
 print('1. -------------------------')
 def main_func():
     def inner_func():
