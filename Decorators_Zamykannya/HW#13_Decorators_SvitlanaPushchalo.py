@@ -46,6 +46,7 @@ def hyp(katet1, katet2):
 
 print(hyp(3, 4))
 
+
 print("\nTask3")
 # """
 # 3. Написати функцію яка приймає список елементів і знаходить суму, до функції написати декоратор який перед тим як
@@ -61,7 +62,8 @@ def decorator3(summa_):
                 new_list.append(i)
             except ValueError:
                 continue
-        return summa_(new_list)
+        summ = summa_(new_list)
+        return summ
     return inner
 
 @decorator3
@@ -74,19 +76,19 @@ print(summa(lst))
 
 print("\nTask4")
 # """
-# 4. Написати функцію яка приймає на вхід ціле число n створює і повертає список цілих чисел від 0 до n.
-# Написати до цієї функції декоратор який всі елементи отриманого списку переведе в строковий тип даних
+# 4. Написати функцію яка приймає на вхід ціле число n, і створює та повертає список цілих чисел від 0 до n.
+# Написати до цієї функції декоратор, який всі елементи отриманого списку переведе в строковий тип даних
 # """
 def decor4(ff_):
     def inner():
-        a = int(input('Enter some number: '))
-        list_t = ff_(a)
+        nn = int(input('Enter some number: '))
+        list_t = ff_(nn)
         new_list = [str(elem) for elem in list_t]
         return new_list
     return inner
 
 @decor4
-def ff(k):
-    return list(range(k+1))
+def ff(n):
+    return list(range(n + 1))
 
 print(ff())
