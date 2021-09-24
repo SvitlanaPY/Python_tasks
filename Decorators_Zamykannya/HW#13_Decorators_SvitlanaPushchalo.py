@@ -83,6 +83,7 @@ def decor4(ff_):
     def inner():
         nn = int(input('Enter some number: '))
         list_t = ff_(nn)
+        print(list_t)
         new_list = [str(elem) for elem in list_t]
         return new_list
     return inner

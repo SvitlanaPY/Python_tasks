@@ -255,3 +255,17 @@ say_say('Vasya', 'Ivanov', 35)
 # Hello, Vasya Ivanov 35
 # </table
 # </h1>
+
+
+def decor(func_):
+    def wrap(n):
+        result = func_()
+        new_list = [str(el) for el in result]
+        return new_list
+    return wrap
+
+def func(n):
+    return [i for i in range(n)]
+
+wrap_ = decor(func)
+wrap(10)
