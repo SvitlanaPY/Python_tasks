@@ -52,6 +52,9 @@ print(ffunc())     # викликаючи ffunc(), ми насправді ви�
 # inner_ = decor4(ffunc)
 # result = inner_()
 # print(result)
+# або в один рядок:
+# result = decor4(ffunc)()
+# print(result)
 
 # @decor4 над ф-ією ffunc - це те саме, що і запис ffunc = decor4(ffunc);
 # тобто ми ф-ію ffunc підміняємо на ф-ію inner, бо decor4(ffunc)/@decor4 повертає нам посилання на ф-ію inner;
