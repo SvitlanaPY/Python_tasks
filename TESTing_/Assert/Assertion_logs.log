@@ -1,0 +1,4 @@
+INFO:root:test failed
+WARNING:root:test failed
+INFO:root:test passed
+WARNING:root:test failed

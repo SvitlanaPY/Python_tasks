@@ -1,10 +1,10 @@
 import unittest
 from calc import Calc
-
+from math import sqrt
 
 class TestSum(unittest.TestCase):
     """
-    TESTing_ adding of values in calculator
+    Testing adding of values in calculator
     """
 
     def setUp(self) -> None:
@@ -35,7 +35,7 @@ class TestSum(unittest.TestCase):
 
 class TestMinus(unittest.TestCase):
     """
-    TESTing_ subtraction of values in calculator
+    Testing subtraction of values in calculator
     """
     def setUp(self) -> None:
         print('setUp')
@@ -65,7 +65,7 @@ class TestMinus(unittest.TestCase):
 
 class TestMult(unittest.TestCase):
     """
-    TESTing_ multiplication of values in calculator
+    Testing multiplication of values in calculator
     """
     def setUp(self) -> None:
         print('setUp')
@@ -93,7 +93,7 @@ class TestMult(unittest.TestCase):
 
 class TestDiv(unittest.TestCase):
     """
-    TESTing_ division of values in calculator
+    Testing division of values in calculator
     """
     def setUp(self) -> None:
         print('setUp')
@@ -126,7 +126,7 @@ class TestDiv(unittest.TestCase):
 
 class TestPow(unittest.TestCase):
     """
-    TESTing_ rise any number to the power in calculator
+    Testing rise any number to the power in calculator
     """
     def setUp(self) -> None:
         print('setUp')
@@ -156,7 +156,7 @@ class TestPow(unittest.TestCase):
 
 class TestPerc(unittest.TestCase):
     """
-    TESTing_ percentage of any number in calculator
+    Testing percentage of any number in calculator
     """
     def setUp(self) -> None:
         print('setUp')
@@ -184,7 +184,7 @@ class TestPerc(unittest.TestCase):
 
 class TestRoot(unittest.TestCase):
     """
-    TESTing_ square root of any number in calculator
+    Testing square root of any number in calculator
     """
     def setUp(self) -> None:
         print('setUp')
@@ -215,9 +215,7 @@ class TestRoot(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
 # if there is unittest.main() in a python-file then run command ~$ python3 HW#11_UnitTests.py
-# or
-# if there is no unittest.main() in a python-file,
-# then run command ~$ python3 -m unittest -v HW#11_UnitTests.py > output_unittesting.txt
-# testing results will be saved in file 'output_unittesting.txt'
+
+# or if there is no unittest.main() in a python-file,
+# then run command ~$ python3 -m unittest -v HW#11_UnitTests.py
