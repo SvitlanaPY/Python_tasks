@@ -21,19 +21,21 @@ print(wrap_)      # <function decor.<locals>.wrap at 0x7f7395ce4160>
 print(wrap_(10))
 
 
-def decor4(ff_):
+def decor4(ffunc_):
     def inner():
         nn = int(input('Enter some number: '))
-        list_t = ff_(nn)
+        list_t = ffunc_(nn)
         print(list_t)
         new_list = [str(elem) for elem in list_t]
         return new_list
     return inner
 
-@decor4    # це те саме, що і запис ff = decor4(ff);
-# тобто ми ф-ію ff підміняємо на ф-ію inner, бо decor4(ff) поверне нам посилання на ф-ію inner
-def ff(n):   # ff: <function decor4.<locals>.inner at 0x7f5f02e9b1f0>
+# @decor4 над ф-ією ffunc - це те саме, що і запис ffunc = decor4(ffunc);
+# тобто ми ф-ію ffunc підміняємо на ф-ію inner, бо decor4(ffunc)/@decor4 повертає нам посилання на ф-ію inner;
+# ffunc: <function decor4.<locals>.inner at 0x7f5f02e9b1f0>
+@decor4
+def ffunc(n):   # ffunc: <function decor4.<locals>.inner at 0x7f5f02e9b1f0>
     return list(range(n + 1))
 
-print(ff())     # викликаючи ff, ми насправді викликаємо ф-ію inner(),
-# а вже всередині inner() ми викликаємо дійсно ф-ію ff()
+print(ffunc())     # викликаючи ffunc(), ми насправді викликаємо ф-ію inner(),
+# а вже всередині inner() ми викликаємо дійсно ф-ію ffunc()
