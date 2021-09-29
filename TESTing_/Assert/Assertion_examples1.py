@@ -24,7 +24,7 @@ import logging
 # try:
 #     assert hyp(3, 4) == 5
 # except AssertionError:
-#     logger.warning("test failed")
+#     logging.warning("test failed")
 
 
 ############################
