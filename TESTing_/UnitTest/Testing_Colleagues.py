@@ -48,3 +48,7 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(Calc.perc(10, 100), 10)
         self.assertIsInstance(Calc.perc(30, 3), float)
         self.assertNotIsInstance(Calc.perc(10, 2), int)
+
+
+if __name__ == '__main__':
+    unittest.main()

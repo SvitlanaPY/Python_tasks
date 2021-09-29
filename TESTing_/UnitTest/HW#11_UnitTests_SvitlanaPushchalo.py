@@ -76,6 +76,9 @@ class TestMult(unittest.TestCase):
         self.assertIsInstance(Calc.mul(2.0, 2), float)
         self.assertIsInstance(Calc.mul(2, 3.0), float)
 
+        assert 24 in [11, 24, 32]
+        self.assertIn(24, [11, 24, 32])
+
     def test_Multiply_Computing(self):
         print('test_Multiply_Computing')
         self.assertEqual(Calc.mul(0.0, 0), 0)
@@ -111,7 +114,7 @@ class TestDiv(unittest.TestCase):
         self.assertEqual(Calc.div(-50, 2), -25)
         self.assertEqual(Calc.div(-5, -5), 1.0)
 
-    def test_Division_RaiseExceptions(self):
+    def test_Divide_RaiseExceptions(self):
         print('test_Division_RaiseExceptions')
         # self.assertRaises(ZeroDivisionError, Calc.div, 10, 0)
         with self.assertRaises(ZeroDivisionError):
@@ -200,7 +203,7 @@ class TestRoot(unittest.TestCase):
         self.assertEqual(Calc.root(625), 25.0)
         self.assertEqual(Calc.root(4.0), 2.0)
 
-    def test_Division_RaiseExceptions(self):
+    def test_Sqrt_RaiseExceptions(self):
         print('test_Sqrt_RaiseExceptions')
         # self.assertRaises(ValueError, Calc.root, -25)
         with self.assertRaises(ValueError):

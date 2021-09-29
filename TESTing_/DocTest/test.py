@@ -13,9 +13,9 @@
 #         if b != 0:
 #             return round((a / b), 2)
 #         else:
-#             return ZeroDivisionError("Divior is zero!")
+#             return ZeroDivisionError("Divisor is zero!")
 #     else:
-#         return ValueError('It must be a nmber')
+#         return ValueError('It must be a number')
 #
 # divv = div(10, 7)
 # print(divv)
