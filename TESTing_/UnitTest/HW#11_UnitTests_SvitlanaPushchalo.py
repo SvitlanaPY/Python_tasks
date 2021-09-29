@@ -6,10 +6,6 @@ class TestSum(unittest.TestCase):
     """
     Testing adding of values in calculator
     """
-
-    def setUp(self) -> None:
-        print('setUp')
-
     def test_Add_DataInputs(self):
         print('test_Add_DataInputs')
         self.assertIsInstance(Calc.sum(1, 2), int)
@@ -29,17 +25,11 @@ class TestSum(unittest.TestCase):
         with self.assertRaises(TypeError):
             Calc.sum("1", 2)
 
-    def tearDown(self) -> None:
-        print('tearDown\n')
-
 
 class TestMinus(unittest.TestCase):
     """
     Testing subtraction of values in calculator
     """
-    def setUp(self) -> None:
-        print('setUp')
-
     def test_Subtract_DataInputs(self):
         print('test_Subtract_DataInputs')
         self.assertIsInstance(Calc.minus(1, 2), int)
@@ -59,16 +49,11 @@ class TestMinus(unittest.TestCase):
         with self.assertRaises(TypeError):
             Calc.minus(52, "2")
 
-    def tearDown(self) -> None:
-        print('tearDown\n')
-
 
 class TestMult(unittest.TestCase):
     """
     Testing multiplication of values in calculator
     """
-    def setUp(self) -> None:
-        print('setUp')
 
     def test_Multiply_DataInputs(self):
         print('test_Multiply_DataInputs')
@@ -90,16 +75,11 @@ class TestMult(unittest.TestCase):
         print('test_Multiply_SpecialCase')
         self.assertEqual(Calc.mul(3, '500'), '500500500')
 
-    def tearDown(self) -> None:
-        print('tearDown\n')
-
 
 class TestDiv(unittest.TestCase):
     """
     Testing division of values in calculator
     """
-    def setUp(self) -> None:
-        print('setUp')
 
     def test_Divide_DataInputs(self):
         print('test_Divide_DataInputs')
@@ -123,16 +103,11 @@ class TestDiv(unittest.TestCase):
         with self.assertRaises(TypeError):
             Calc.div(52, "2")
 
-    def tearDown(self) -> None:
-        print('tearDown\n')
-
 
 class TestPow(unittest.TestCase):
     """
     Testing rise any number to the power in calculator
     """
-    def setUp(self) -> None:
-        print('setUp')
 
     def test_Power_DataInputs(self):
         print('test_Power_DataInputs')
@@ -153,16 +128,11 @@ class TestPow(unittest.TestCase):
         with self.assertRaises(TypeError):
             Calc.pow("10", 2)
 
-    def tearDown(self) -> None:
-        print('tearDown\n')
-
 
 class TestPerc(unittest.TestCase):
     """
     Testing percentage of any number in calculator
     """
-    def setUp(self) -> None:
-        print('setUp')
 
     def test_Percentage_DataInputs(self):
         print('test_Percentage_DataInputs')
@@ -181,16 +151,11 @@ class TestPerc(unittest.TestCase):
         with self.assertRaises(TypeError):
             Calc.perc("10", 100)
 
-    def tearDown(self) -> None:
-        print('tearDown\n')
-
 
 class TestRoot(unittest.TestCase):
     """
     Testing square root of any number in calculator
     """
-    def setUp(self) -> None:
-        print('setUp')
 
     def test_Sqrt_DataInputs(self):
         print('test_Sqrt_DataInputs')
@@ -211,9 +176,6 @@ class TestRoot(unittest.TestCase):
         # self.assertRaises(TypeError, Calc.root, "4")
         with self.assertRaises(TypeError):
             Calc.root("25")
-
-    def tearDown(self) -> None:
-        print('tearDown\n')
 
 
 if __name__ == '__main__':

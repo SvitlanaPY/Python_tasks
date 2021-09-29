@@ -150,5 +150,5 @@ if __name__ == "__main__":
     import doctest
     doctest.testmod(verbose=True)
 
-# to save outputs/testing results into file "DocTests_TestingResults.txt":
+# to save outputs/testing_unittesting results into file "DocTests_TestingResults.txt":
 # ~$ python3 -m doctest -v HW#11_DocTests_SvitlanaPushchalo.py > DocTests_TestingResults.txt

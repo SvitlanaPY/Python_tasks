@@ -77,7 +77,7 @@ def div(c: int, d: int) -> float:
 if __name__ == "__main__":
     import doctest
     doctest.testmod(verbose=True)
-
+#   метод testmod() у doctest, який азапускає всі наші тести
 
 print("__name__=", __name__)
 
