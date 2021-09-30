@@ -1,7 +1,5 @@
 import unittest
-import sys
-import os
-from calc import Calc
+from testing_.calc import Calc
 
 
 class TestDiv(unittest.TestCase):
