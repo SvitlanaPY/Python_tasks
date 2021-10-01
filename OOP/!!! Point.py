@@ -18,9 +18,9 @@ p1.get_distance(10) # Распечатает "Передана не точка"
 
 
 class Point:
-    def set_coordinates(self, x, y):
-        self.x = x
-        self.y = y
+    def set_coordinates(self, coord_x, coord_y):
+        self.x = coord_x
+        self.y = coord_y
 
     def get_distance(self, arg):
         if isinstance(arg, Point):
