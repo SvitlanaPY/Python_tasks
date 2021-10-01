@@ -29,13 +29,17 @@ print(CarNew.func)    # <function CarNew.func at 0x7fe61250b8b0>
 pprint.pprint(CarNew.__dict__)
 
 """
-До атрибутів класу звертатись через <назву класу/екземпляра класу>.<назва атрибуту>:
-CarNew.model / с.model 
+Доступитись до атрибутів класу:
+<назва класу>/ <назва екземпляра класу>.<назва атрибуту>:
+CarNew.model 
+с.model 
 
-До атрибутів класу можна звертатись через ф-ію getattr(<об"єкт, до атрибуту якого ми звертаємось>, <"сам атрибут">)
-<сам атрибут> має бути в лапках
+До атрибутів класу можна звертатись також через ф-ію getattr():
+getattr(<об"єкт, до атрибуту якого ми звертаємось>, <"сам атрибут">),
+де об"єкт - це клас чи екземпляр класу
+<сам атрибут> має бути в лапках!!!
 getattr(CarNew, "model")  -- через клас
-getattr(c, "model")  -- через об"єкт класу
+getattr(c, "model")  -- через екземпляр класу
 
 У функції getattr може бути третій параметр, який повернеться нам, якщо не існує атрибута, до якого ми звертаємось:
 getattr(CarNew, "window", "dark") - повернеться dark
@@ -54,50 +58,54 @@ print(c.window)
 
 """
 ЗМІНИТИ значення атрибуту класу:
-c.model = "Opel" / CarNew.model = 'Opel'
+CarNew.model = 'Opel'
 
 або використовуючи функцію setattr():
-setattr(CarNew, "model", "Audio") / setattr(c, "model", "Audio") 
+setattr(CarNew, "model", "Audio") 
 """
-c.model = 'Opel'
-pprint.pprint(c.model)
-# 'Opel'
-CarNew.model = 'Audio'
+CarNew.model = 'Opel'
 pprint.pprint(CarNew.model)
-# 'Audio'
-setattr(CarNew, "color", "red")
+# 'Opel'
+setattr(CarNew, "model", "Audio")
 pprint.pprint(CarNew.color)
-# 'red'
-setattr(c, "color", "black")
-pprint.pprint(c.color)
-# 'black'
+# 'Audio'
+
 
 """
 СТВОРИТИ атрибут класу:
-setattr(Person, "height", 180) / setattr(a, "height", 190)
+setattr(Person, "height", 180) 
 або
-Person.weight = 60 / a.weight = 65
+Person.weight = 60 
 """
 Person.weight = 60
 pprint.pprint(Person.weight)
 # 60
-a.weight = 65
-pprint.pprint(a.weight)
-# 65
+
 setattr(Person, "height", 180)
 pprint.pprint(Person.height)
 # 180
-setattr(a, "height", 190)
-pprint.pprint(a.height)
-# 190
+
+"""
+Всі атрибути, які створені в класі, НЕ знаходяться в просторі імен екземпляра класу, но ми можемо до них звертатись!
+
+Створюючи атрибут через виклик екземпляру класу, ми створимо атрибут у області видимості лише екземпляру класу, 
+а не в класі і цей атрибут НЕ буде доступний через виклик класу - отримаємо AttributeError
+a.surname = 'Ivanov'  (де а - є екземпляром класу Person)
+pprint.pprint(Person.surname)   # AttributeError: type object 'Person' has no attribute 'surname'
+"""
+
 
 """
 Щоб вибалити атрибут класу: 
-del Person.age / del a.age
-delattr(Person, "age") / delattr(a, "age") 
+del Person.age 
+delattr(Person, "age")
 """
 del Person.age
 # pprint.pprint(Person.age)   # AttributeError, бо атрибут age вже видалиено
 pprint.pprint(Person.__dict__)
 delattr(Person, "name")
 pprint.pprint(Person.__dict__)
+
+"""
+всі атрибути, які створені в класі, НЕ знаходяться в просторі імен екземпляра класу, но ми можемо до них звертатись
+"""
