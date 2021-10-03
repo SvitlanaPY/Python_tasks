@@ -75,9 +75,3 @@ pprint.pprint(isinstance(MyList, object))   # True
 pprint.pprint(isinstance(l, MyList))   # True
 pprint.pprint(isinstance(l, list))     # True
 pprint.pprint(isinstance(l, object))   # True
-
-
-
-
-
-
