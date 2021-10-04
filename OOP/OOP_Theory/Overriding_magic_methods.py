@@ -22,7 +22,7 @@ p = Person('John')
 d = Doctor("Adam")
 # init Person
 print(p.name, d.name)
-# John Adam
+# John   Adam
 
 
 print()

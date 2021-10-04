@@ -62,9 +62,4 @@
 # print(a.my_balance)
 
 
-
-# # print(SchoolBus.__mro__)
-# # print(SchoolBus.mro())
-# # SchoolBus is child class
-#
 print(dir(object))
