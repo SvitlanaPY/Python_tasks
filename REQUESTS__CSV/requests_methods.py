@@ -12,11 +12,12 @@ import requests
 # response = requests.options('https://httpbin.org/get')
 
 
-response = requests.post('https://httpbin.org/post', json = {'key' : 'value'})
+response = requests.post('https://httpbin.org/post', json={'key': 'value'})
 json_response = response.json()
-print(json_response)
+print("json_response: ", json_response)
 print(json_response['data'])
-print(response.request.url)
+print("url: ", response.request.url)
+# url:  https://httpbin.org/post
 
 response = requests.head('https://httpbin.org/get')
 print(response.headers['Content-Type'])

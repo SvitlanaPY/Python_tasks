@@ -1,5 +1,6 @@
 # importing the requests library
 import requests
+# https://www.geeksforgeeks.org/get-post-requests-using-python/
 
 # defining the api-endpoint
 # API_ENDPOINT = "http://pastebin.com/api/api_post.php"
@@ -23,7 +24,7 @@ data = {'api_dev_key': API_KEY,
 		'api_paste_code': source_code,
 		'api_paste_format':'python'}
 
-# sending post request and saving response as response object
+# sending post request and saving response as response-object
 r = requests.post(url = API_ENDPOINT, data=data)
 
 # extracting response text
