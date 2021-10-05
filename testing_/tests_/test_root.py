@@ -35,9 +35,3 @@ class TestRoot(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-# if there is unittest.main() in a python-file then run command ~$ python3 HW#11_UnitTests.py
-# or
-# if there is no unittest.main() in a python-file,
-# then run command ~$ python3 -m unittest -v HW#11_UnitTests.py > output_unittesting.txt
-# testing_unittesting results will be saved in file 'output_unittesting.txt'
