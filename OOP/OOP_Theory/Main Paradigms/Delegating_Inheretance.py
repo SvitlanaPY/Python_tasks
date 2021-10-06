@@ -119,3 +119,20 @@ g.info()
 h.info()
 # Parent class
 # HUMAN Ivan Ivanov
+
+
+# 2. Create a child class Bus that will inherit all of the variables and methods of the Vehicle class
+# and will have seating_capacity own method
+class Vehicle:
+    def __init__(self, max_speed=0, mileage=0):
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    def __init__(self, max_speed=0, mileage=0, seating_capacity=0):
+        super().__init__(max_speed, mileage)
+        self.seating_capacity = seating_capacity
+
+bus = Bus(100, 200, 300)
+print(bus.max_speed, bus.mileage, bus.seating_capacity)
+# OUTPUT: 100 200 300

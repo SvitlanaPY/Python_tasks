@@ -112,3 +112,35 @@ class Person3(Doctor3, Builder3):   # клас Person візьме поведі�
 pp_ = Person3('rank 5', 'degree spec')
 print(pp_)
 # Person3 has:  rank 5, degree spec
+
+
+"""6*. Create a new class SchoolBus that will inherit all of the methods from School and Bus
+# and will have its own - bus_school_color"""
+
+
+class Vehicle:
+
+    def __init__(self, max_speed=0, mileage=0):
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+
+class School:
+
+    def __init__(self, get_school_id, number_of_students):
+        self.get_school_id = get_school_id
+        self.number_of_students = number_of_students
+
+
+class Bus(Vehicle):
+
+    def __init__(self, max_speed=0, mileage=0, seating_capacity=0):
+        super().__init__(max_speed, mileage)
+        self.seating_capacity = seating_capacity
+
+
+class SchoolBus(School, Bus):
+    def __init__(self, color , get_school_id, number_of_students, max_speed=0, mileage=0, seating_capacity=0):
+        super().__init__(get_school_id, number_of_students)
+        Bus.__init__(self, max_speed, mileage, seating_capacity)
+        self.bus_school_color = color
