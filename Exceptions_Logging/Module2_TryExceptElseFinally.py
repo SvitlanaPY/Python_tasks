@@ -113,16 +113,16 @@ def divide(x, y):
     finally:
         print("Finally")
 
+
 divide(2, 1)
-# OUTPUT:
 # result is: 2.0
 # Finally
-# divide(2, 0)
-# OUTPUT:
+
+divide(2, 0)
 # Division Error
 # Finally
+
 # divide(2, [])
-# OUTPUT:
 # Finally
 # Traceback (most recent call last): .... TypeError: unsupported operand type(s) for /: 'int' and 'list'
 

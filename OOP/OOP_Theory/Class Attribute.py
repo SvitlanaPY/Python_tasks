@@ -90,8 +90,8 @@ pprint.pprint(Person.height)
 
 Створюючи атрибут через виклик екземпляру класу, ми створимо атрибут у області видимості лише екземпляру класу, 
 а не в класі і цей атрибут НЕ буде доступний через виклик класу - отримаємо AttributeError
-a.surname = 'Ivanov'  (де а - є екземпляром класу Person)
-pprint.pprint(Person.surname)   # AttributeError: type object 'Person' has no attribute 'surname'
+a.surname = 'Ivanov'  (де 'а' - є екземпляром класу Person)
+print(Person.surname)   # AttributeError: type object 'Person' has no attribute 'surname'
 """
 
 
@@ -100,6 +100,7 @@ pprint.pprint(Person.surname)   # AttributeError: type object 'Person' has no at
 del Person.age 
 delattr(Person, "age")
 """
+
 del Person.age
 # pprint.pprint(Person.age)   # AttributeError, бо атрибут age вже видалиено
 pprint.pprint(Person.__dict__)
@@ -127,6 +128,7 @@ class Student:
     def __init__(self, id, name):
         self.id = id
         self.name = name
+
 
 student = Student(101, 'Jim')
 setattr(student, 'email', 'email_1@gmail.com')
