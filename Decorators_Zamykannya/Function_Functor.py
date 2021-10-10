@@ -42,17 +42,36 @@
 
 
 
-class Repeater:
-    def __init__(self, num_):
+# class Repeater:
+#     def __init__(self, num_):
+#         self.num_ = num_
+#
+#     def __call__(self, foo_):
+#         def inner(*args, **kwargs):
+#             for i in range(self.num_):
+#                 foo_(*args, **kwargs)
+#         return inner
+#
+# @Repeater(3)
+# def foo():
+#     print("HELLO!")
+#
+# foo()
+
+
+class RepeaterNew:
+    def __init__(self, num_, func):
+        self.fn = func
         self.num_ = num_
 
-    def __call__(self, foo_):
+    def __call__(self, *args, **kwargs):
         def inner(*args, **kwargs):
             for i in range(self.num_):
                 foo_(*args, **kwargs)
-        return inner
+            return inner()
 
-@Repeater(3)
+
+@RepeaterNew(3)
 def foo():
     print("HELLO!")
 

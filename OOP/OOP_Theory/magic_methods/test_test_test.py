@@ -1,7 +1,12 @@
-values1 = [1, 2]
-values2 = [2, 4]
-values3 = []
+class Calc:
 
-for i in range(len(values1)):
-    values3.append(values1[i] + values2[i])
-print(values3)
+    @staticmethod
+    def add_nums(*args):
+        return sum(args)
+
+addnums = Calc()
+print(addnums.add_nums(1, 2, 3, 5))
+# OUTPUT: 6
+
+print(Calc.add_nums(1, 2, 3, 5))
+# OUTPUT: 6

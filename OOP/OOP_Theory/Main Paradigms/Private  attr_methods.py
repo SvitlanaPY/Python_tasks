@@ -80,7 +80,7 @@ account4._BankAccount__name
 account4._BankAccount__balance
 account4._BankAccount__passport
 """
-print(dir(account4))    # щоб подивитись, які атрибути є у нашого об"єкту account4
+print(dir(account4))    # щоб подивитись, які атрибути, методи є у нашого об"єкту account4
 # ['_BankAccount4__balance', '_BankAccount4__name', '_BankAccount4__passport', '_BankAccount4__print_private_data', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'print_public_data']
 account4._BankAccount4__print_private_data()
 # КАТЯ 400000 888888888
