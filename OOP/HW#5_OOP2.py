@@ -275,6 +275,7 @@ student_email = 'email_2@gmail.com'        # create 'student_email' variable
 setattr(student, 'email', student_email)
 print('student.email=', getattr(student, "email"))
 # OUTPUT: student.email= email2@gmail.com
+print(getattr(student, "name"))
 
 
 print('\n########## 11* ##########')
