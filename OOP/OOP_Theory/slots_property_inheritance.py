@@ -1,4 +1,6 @@
+"""
 
+"""
 class Rectangle:
     __slots__ = 'width', 'height'
 
