@@ -1,28 +1,34 @@
 """
 @STATICMETHOD
-Якщо створити звичайну ф-ію всередині класу (наприклад def hello(): ....),
-то її можна викликати від самого класу: Example.hello()
-но не можемо викликати цю ф-ію від екземпляра класу: ex.hello()  ===>
-виникає TypeError: hello() takes 0 positional arguments but 1 was given
 
-Щоб ми могли викликати функцію від екземплярів, ми створюємо методи (def instance_hello(self): ..... ):
-тепер ми можемо викликати наш метод/ф-ію від екземпляра класу: ex2.instance_hello()
-але не можемо викликати наш метод/ф-ію від класу: Example.instance_hello()  ===>
-виникає # TypeError: instance_hello() missing 1 required positional argument: 'self'
+Якщо створити звичайну ф-ію всередині класу Example (наприклад def hello(): ....),
+то її можна викликати від самого класу : Example.hello()
+но не можемо викликати цю ф-ію від екземпляра класу:
+ex = Example();
+ex.hello()  ===> виникає TypeError: hello() takes 0 positional arguments but 1 was given
+
+Щоб ми могли викликати функцію від екземплярів, ми створюємо методи, наприклад (def instance_hello(self): ..... ):
+тепер ми можемо викликати наш метод/ф-ію def instance_hello() від екземпляра:
+ex2 = Example();
+ex2.instance_hello()
+але не можемо викликати наш метод/ф-ію def instance_hello() від класу:
+Example.instance_hello()  ===> виникає # TypeError: instance_hello() missing 1 required positional argument: 'self'
+
 Щоб функцію можна було викликати як від класу, так і від екземпляра класу - потрібно створити staticmethod
 Щоб функція визначилась як staticmethod, потрібно на ф-ію повісити відповідний декоратор: @staticmethod
 Коли ми створюємо статік-метод, то він не прив"язується ні до класу, ні до екземпляру класу і
 ми можемо спокійно викликати цей метод як у класу, так і в екземплярів класу
 
-Статік метод можна використовувати тоді, коли нам потрібна функція,
+Статік метод можна використовувати тоді, коли нам потрібна звичайна функція,
 но ми хочемо реалізувати її всередині класу, а не виносити її поза клас.
 """
+
 class Example:
     def hello():    # можемо викликати від класу, но не можемо викликати від екземпляра класу
         print('hello')
 
     def instance_hello(self):   # можемо викликати від екземпляра класу, но не можемо викликати від класу
-        print(f'instance_hello {self}')
+        print(f'функція instance_hello {self}')
 
     @staticmethod
     def static_hello():
@@ -34,19 +40,28 @@ print(Example.hello)
 ex = Example()
 print(ex.hello)   # <bound method Example.hello of <__main__.Example object at 0x7fb58a427fa0>>
 
+print()
+
+# викликаємо ф-ію hello() від класу Example:
 Example.hello()   # hello
+# викликаємо ф-ію hello()  від екземпляра ex:
 # ex.hello()    # TypeError: hello() takes 0 positional arguments but 1 was given
 
+print()
 
 ex2 = Example()
-ex2.instance_hello()   # instance_hello <__main__.Example object at 0x7f9f8f777fa0>
+# викликаємо ф-ію instance_hello()  від екземпляра ex2:
+ex2.instance_hello()   # функція instance_hello <__main__.Example object at 0x7fab36304b80>
+# викликаємо ф-ію instance_hello() від класу Example:
 # Example.instance_hello()   # TypeError: instance_hello() missing 1 required positional argument: 'self'
 
+print()
+
 ex3 = Example()
-ex3.static_hello()
-# static_hello
-Example.static_hello()
-# static_hello
+# викликаємо ф-ію instance_hello()  від екземпляра ex3:
+ex3.static_hello()    # static_hello
+# викликаємо ф-ію static_hello() від класу Example:
+Example.static_hello()    # static_hello
 
 
 print('\n########## 3 ##########')
@@ -69,6 +84,7 @@ print(Calc.add_nums(1, 2, 3))
 # OUTPUT: 6
 
 
+print()
 class Calc:
 
     @staticmethod
@@ -76,15 +92,34 @@ class Calc:
         return sum(args)
 
 addnums = Calc()
-print(addnums.add_nums(1, 2, 3, 5))   # виклик ф-ії "add_nums" від екземпляра класу
-# OUTPUT: 6
+print(addnums.add_nums(6, 2, 3, 5))   # виклик ф-ії "add_nums" від екземпляра класу
+# OUTPUT: 16
 
-print(Calc.add_nums(1, 2, 3, 5))   # виклик ф-ії "add_nums" від класу
-# OUTPUT: 6
+print(Calc.add_nums(6, 2, 3, 5))   # виклик ф-ії "add_nums" від класу
+# OUTPUT: 16
 
 
+print("= "*15)
+import datetime
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @staticmethod
+    def is_adult(years):
+        return years > 18
+
+person = Person('Mary', 21)
+print(Person.is_adult(8))    # False
+print(Person.is_adult(28))   # True
+
+
+print("* "*15)
 """
 @CLASSMETHOD
+
 класметод приймає першим параметром клас - cls. 
 При викликові метода від екземпляра класу, у параметр прилетить назва класу нашого екземпляра
 exmpl1.class_hello()   # class_hello <class '__main__.Exmpl'>
@@ -94,22 +129,37 @@ exmpl1.class_hello()   # class_hello <class '__main__.Exmpl'>
 print(exmpl1.__class__)
 # <class '__main__.Exmpl'>
 
-Класметоди потрібні, коли ми хочемо робити якусь обробку НЕ над екземплярами класу, а над цілим класом
-
+Класметоди потрібні, коли ми хочемо робити якусь обробку НЕ над екземплярами класу, а над цілим класом.
 """
 
 class Exmpl:
 
     @classmethod
-    def class_hello(cls):   #
+    def class_hello(cls):
         print(f'class_hello {cls}')
 
 exmpl1 = Exmpl()
 Exmpl.class_hello()   # class_hello <class '__main__.Exmpl'>
-
 exmpl1.class_hello()   # class_hello <class '__main__.Exmpl'>
-print(exmpl1.__class__)   # класом екземпляра exmpl1 є клас Exmpl
-# <class '__main__.Exmpl'>
+print(exmpl1.__class__)   # <class '__main__.Exmpl'>  --->  класом екземпляра exmpl1 є клас Exmpl
+
+
+print("- "*15)
+class MyClass:
+    Total_objects = 0
+
+    def __init__(self):
+        MyClass.Total_objects += 1
+
+    @classmethod
+    def total_objects(cls):
+        print("Total objects: ", cls.Total_objects)
+
+
+my_obj1 = MyClass()
+my_obj2 = MyClass()
+my_obj3 = MyClass()
+MyClass.total_objects()
 
 
 print('\n########## 4* ##########')
