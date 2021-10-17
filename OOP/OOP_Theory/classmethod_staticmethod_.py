@@ -15,12 +15,16 @@ ex2.instance_hello()
 Example.instance_hello()  ===> виникає # TypeError: instance_hello() missing 1 required positional argument: 'self'
 
 Щоб функцію можна було викликати як від класу, так і від екземпляра класу - потрібно створити staticmethod.
-Щоб функція визначилась як staticmethod, потрібно на ф-ію повісити відповідний декоратор: @staticmethod
+Щоб функція визначилась як staticmethod, потрібно на ф-ію повісити відповідний декоратор: @staticmethod.
+
 Коли ми створюємо статік-метод, то він не прив"язується ні до класу, ні до екземпляру класу і
 ми можемо спокійно викликати цей метод як у класу, так і в екземплярів класу
+Статичні методи не мають доступу ні до стану класу, ні до стану екземплярів класу, вони працюють як звичайні ф-ії,
+але відносяться до простору імен цього класу.
 
 Статік метод можна використовувати тоді, коли нам потрібна звичайна функція,
 но ми хочемо реалізувати її всередині класу, а не виносити її поза клас.
+
 """
 
 class Example:
@@ -129,6 +133,9 @@ exmpl1.class_hello()   # class_hello <class '__main__.Exmpl'>
 print(exmpl1.__class__)
 # <class '__main__.Exmpl'>
 
+!!! Класметод можна також викликати без створення екземпляру класу, а безпосередньо за допомогою класу:
+Exmpl.class_hello() 
+
 """
 
 class Exmpl:
@@ -138,7 +145,7 @@ class Exmpl:
         print(f'class_hello {cls}')
 
 exmpl1 = Exmpl()
-Exmpl.class_hello()   # class_hello <class '__main__.Exmpl'>
+Exmpl.class_hello()    # class_hello <class '__main__.Exmpl'>
 exmpl1.class_hello()   # class_hello <class '__main__.Exmpl'>
 print(exmpl1.__class__)   # <class '__main__.Exmpl'>  --->  класом екземпляра exmpl1 є клас Exmpl
 
@@ -184,10 +191,11 @@ class Pizza:
     @classmethod
     def carbonara(cls):
         return Pizza(['forcemeat', 'tomatoes'])   # Pizza() - створення об"єкту класу Pizza
+        # return cls(['forcemeat', 'tomatoes'])
 
     @classmethod
     def bolognaise(cls):
-        return Pizza(['bacon', 'parmesan', 'eggs'])
+        return cls(['bacon', 'parmesan', 'eggs'])
 
 pizza_carbonara = Pizza.carbonara()
 print('pizza_carbonara:', pizza_carbonara.ingredients)

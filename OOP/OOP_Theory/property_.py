@@ -1,10 +1,18 @@
 """
-Property - для читання і зміни захищених(private) атрибутів.
-ім"я getter-а та ім"я setter-а мають бути однакові і такими ж як ім"я property:
+Property - для читання і зміни захищених(private) атрибутів. Потрібні, щоб працювати з полями/атрибутами класу.
+Декоратор Property дозволяє нам створити властивості/Property, які будуть виглядати як атрибути в класі.
+При читанні цих атрибутів викликається метод getter, при записі нового атрибуту чи значення - метод setter,
+при видаленні - deletter.
+getter - метод, що дозволяє вичитати якісь дані,
+setter - можуть порівнювати вхідні дані на коректність і викликати якийсь додаткоий метод
+(при встановленні якоїсь картинки на екрані, додаткову перевірку віку...).
+
+Ім"я getter-а та ім"я setter-а мають бути однакові і такими ж як ім"я property:
 getter name == setter name == property name
 Ф-ія setter як правило призначена для встановлення/запису нового значення атрибуту,
 отже, в якості параметра вона повинна приймати аргумент (нове значення).
 
+Доступ до проперті відбувається як до атрибуту об"єкту.
 """
 
 class BankAcc:
@@ -37,7 +45,7 @@ print(b.get_balance())   # get_balance() - call method get_balance
 b.set_balance(400)
 print(b.get_balance())
 c = BankAcc('Tanya', 200)
-#c.set_balance('hello')   # set_balance() - call method set_balance
+# c.set_balance('hello')   # set_balance() - call method set_balance
 print(c.get_balance())
 x = property
 print(x)   # <class 'property'>

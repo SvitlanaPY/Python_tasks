@@ -96,7 +96,7 @@ print(Person.surname)   # AttributeError: type object 'Person' has no attribute 
 
 
 """
-Щоб вибалити атрибут класу: 
+Щоб видалити атрибут класу: 
 del Person.age 
 delattr(Person, "age")
 """
