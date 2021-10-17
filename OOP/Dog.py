@@ -4,8 +4,8 @@
 конструктор __init__, принимающий 2 аргумента: name, age.
 метод description, который возвращает строку в виде "<name> is <age> years old"
 метод speak принимающий один аргумент, который возвращает строку вида "<name> says <sound>";
-jack = Dog("Jack", 4)
 
+jack = Dog("Jack", 4)
 print(jack.description()) # распечатает 'Jack is 4 years old'
 print(jack.speak("Woof Woof")) # распечатает 'Jack says Woof Woof'
 print(jack.speak("Bow Wow")) # распечатает 'Jack says Bow Wow'
@@ -26,8 +26,8 @@ class Dog:
 jack = Dog("Jack", 4)
 
 print(jack.description())
-# распечатает 'Jack is 4 years old'
+# 'Jack is 4 years old'
 print(jack.speak("Woof Woof"))
-# распечатает 'Jack says Woof Woof'
+# 'Jack says Woof Woof'
 print(jack.speak("Bow Wow"))
-# распечатает 'Jack says Bow Wow'
+# 'Jack says Bow Wow'

@@ -14,7 +14,7 @@ ex2.instance_hello()
 але не можемо викликати наш метод/ф-ію def instance_hello() від класу:
 Example.instance_hello()  ===> виникає # TypeError: instance_hello() missing 1 required positional argument: 'self'
 
-Щоб функцію можна було викликати як від класу, так і від екземпляра класу - потрібно створити staticmethod
+Щоб функцію можна було викликати як від класу, так і від екземпляра класу - потрібно створити staticmethod.
 Щоб функція визначилась як staticmethod, потрібно на ф-ію повісити відповідний декоратор: @staticmethod
 Коли ми створюємо статік-метод, то він не прив"язується ні до класу, ні до екземпляру класу і
 ми можемо спокійно викликати цей метод як у класу, так і в екземплярів класу
@@ -118,9 +118,9 @@ print(Person.is_adult(28))   # True
 
 print("* "*15)
 """
-@CLASSMETHOD
+@CLASSMETHOD - Класметоди потрібні, коли ми хочемо робити якусь обробку НЕ над екземплярами класу, а над цілим класом.
 
-класметод приймає першим параметром клас - cls. 
+Класметод приймає першим параметром клас - cls. 
 При викликові метода від екземпляра класу, у параметр прилетить назва класу нашого екземпляра
 exmpl1.class_hello()   # class_hello <class '__main__.Exmpl'>
 Пайтон сам визначить, що класом нашого екземпляра exmpl1 є клас Exmpl і передасть назву класу у параметр cls нашого класметоду
@@ -129,7 +129,6 @@ exmpl1.class_hello()   # class_hello <class '__main__.Exmpl'>
 print(exmpl1.__class__)
 # <class '__main__.Exmpl'>
 
-Класметоди потрібні, коли ми хочемо робити якусь обробку НЕ над екземплярами класу, а над цілим класом.
 """
 
 class Exmpl:
@@ -160,6 +159,7 @@ my_obj1 = MyClass()
 my_obj2 = MyClass()
 my_obj3 = MyClass()
 MyClass.total_objects()
+# Total objects:  3
 
 
 print('\n########## 4* ##########')
@@ -191,12 +191,15 @@ class Pizza:
 
 pizza_carbonara = Pizza.carbonara()
 print('pizza_carbonara:', pizza_carbonara.ingredients)
+# pizza_carbonara: ['forcemeat', 'tomatoes']
 print(pizza_carbonara)   # <__main__.Pizza object at 0x7f9d69804f70>
 
 pizza_bolognaise = Pizza.bolognaise()
 print('pizza_bolognaise:', pizza_bolognaise.ingredients)
+# pizza_bolognaise: ['bacon', 'parmesan', 'eggs']
 print(pizza_bolognaise)
 # <__main__.Pizza object at 0x7f73e7334ca0>
 
 pasta_1 = Pizza(["tomato", "cucumber"])
 print(pasta_1.ingredients)
+# ['tomato', 'cucumber']

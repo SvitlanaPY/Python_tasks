@@ -1,10 +1,12 @@
 """
-Property - для читання і зміни захищених(private) атрибутів
+Property - для читання і зміни захищених(private) атрибутів.
 ім"я getter-а та ім"я setter-а мають бути однакові і такими ж як ім"я property:
 getter name == setter name == property name
 Ф-ія setter як правило призначена для встановлення/запису нового значення атрибуту,
-отже в якості параметра вона повинна приймати аргумент (нове значення)
+отже, в якості параметра вона повинна приймати аргумент (нове значення).
+
 """
+
 class BankAcc:
     def __init__(self, name, balance):
         self.name = name
@@ -142,7 +144,7 @@ k_.e_mail = 'prince@stillwait'
 print(k_.e_mail)
 
 
-# ІНШИЙ СПОСІБ ПРЕДСТАВЛЕННЯ property: ЧЕРЕЗ ДЕКОРАТОР-property
+# ПРЕДСТАВЛЕННЯ property ЧЕРЕЗ ДЕКОРАТОР-property
 print('\n########## 9 ##########')
 # class Person:
 #     """
@@ -151,7 +153,6 @@ print('\n########## 9 ##########')
 #     name = "John"
 #     age = 36
 #     country = "USA"
-
 
 class Person:
     def __init__(self, name, country, years_old=0):
