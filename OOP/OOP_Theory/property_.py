@@ -1,18 +1,31 @@
 """
-Property - для читання і зміни захищених(private) атрибутів. Потрібні, щоб працювати з полями/атрибутами класу.
+Property - для читання/створення нових атрибутів (getter) і
+зміни/перезапису (setter) існуючих (як правило захищених(private)) атрибутів.
+Property потрібні, щоб працювати з полями/атрибутами класу.
+
 Декоратор Property дозволяє нам створити властивості/Property, які будуть виглядати як атрибути в класі.
 При читанні цих атрибутів викликається метод getter, при записі нового атрибуту чи значення - метод setter,
 при видаленні - deletter.
-getter - метод, що дозволяє вичитати якісь дані,
-setter - можуть порівнювати вхідні дані на коректність і викликати якийсь додаткоий метод
-(при встановленні якоїсь картинки на екрані, додаткову перевірку віку...).
 
-Ім"я getter-а та ім"я setter-а мають бути однакові і такими ж як ім"я property:
-getter name == setter name == property name
+getter - метод, що дозволяє вичитати якісь дані, а також може повернути динамічно обчислене значення;
+це метод, результат якого буде використовуватись як атрибут/зробити новий атрибут.
+
+setter - можуть порівнювати вхідні дані на коректність і викликати якийсь додаткоий метод;
+setter - можна використовувати для якихось перевірок, напр. для перевірки віку...;
+за допомогою setter-ів атрибуту можна присвоїти якесь нове значення (для перезапису атрибутів);
+(при встановленні якоїсь картинки на екрані, додаткову перевірку віку...).
 Ф-ія setter як правило призначена для встановлення/запису нового значення атрибуту,
 отже, в якості параметра вона повинна приймати аргумент (нове значення).
 
-Доступ до проперті відбувається як до атрибуту об"єкту.
+Ім"я getter-а та ім"я setter-а мають бути однакові і такими ж як ім"я property:
+getter name == setter name == property name
+
+За допомогою Property ми доступаємось до методів(getter/setter/deletter) як до атрибуту об"єкту:
+d  = BankAcc('Ivan', 100)
+getter: print(d.balance)   # balance - it is a PROPERTY;
+setter: d.balance = 700
+deletter: del d.balance
+
 """
 
 class BankAcc:
@@ -57,7 +70,7 @@ print(d.balance)    # 777
 # add delete function/method
 w = BankAcc('Misha', 400)
 print(w.balance)
-# del w.balance
+# del w.balance     # call deletter
 # print(w.balance)     # call getter
 # w.balance = 999      # call setter
 # print(w.balance)
@@ -178,8 +191,9 @@ class Person:
         print('Set age')
         self.__years_old = new_age
 
-# ім"я getter-а та ім"я setter-а мають бути однакові і такими ж як ім"я property (person.age = 25, тут age і є нашою property)
-# !!!!! ім"я getter-а = ім"я setter-а = ім"я property-і)
+# ім"я getter-а та ім"я setter-а мають бути однакові і такими ж як ім"я property
+# (person.age = 25, тут age і є нашою property)
+# !!!!! ім"я getter-а = ім"я setter-а = ім"я property
 
 person = Person('John', 'USA', 36)
 print(person.age)    # тут age і є нашою property; (call getter)
@@ -257,3 +271,51 @@ concert = Concert()
 concert.visitors_count = 10
 print(concert.visitors_count)
 # OUTPUT: 10
+
+
+print("# "*15)
+class Human:
+    def __init__(self, name, surname):
+        self.name = name
+        self.surname = surname
+        
+    @property
+    def get_full_name(self):
+        return f'{self.name} {self.surname}'
+
+
+human1 = Human("Анна", "Тех")
+print(human1.get_full_name)
+# Анна Тех
+
+human2 = Human("Olha", "Smith")
+print(human2.get_full_name)
+# Olha Smith
+human2.name = 'Taya'
+print(human2.get_full_name)
+# Taya Smith
+
+
+print("@ " * 15)
+class Humann:
+    def __init__(self, name, surname):
+        self.name = name
+        self.surname = surname
+
+    @property
+    def full_name(self):
+        return f'{self.name} {self.surname}'
+
+    @full_name.setter
+    def full_name(self, new):
+        self.name, self.surname = new.split(' ')
+
+
+humn1 = Humann('Anna', 'Tech')
+print(humn1.full_name)
+humn1.full_name = 'Rob Squad'
+print("NAME: ", humn1.name)
+print("SURNAME: ", humn1.surname)
+print("FULL NAME:  ", humn1.full_name)
+
+

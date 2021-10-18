@@ -46,4 +46,3 @@ gs = GuitarString()
 guitar = Guitar(gs)
 print(guitar.string)
 # OUTPUT: <__main__.GuitarString object at 0x7f398ed32070>
-
