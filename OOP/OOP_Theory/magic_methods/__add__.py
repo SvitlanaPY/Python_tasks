@@ -1,4 +1,8 @@
 """
+magic methods = dunder methods (Double UNDERscore) -
+це спеціальні методи, які починаються і закінчуються на два нижніх підкреслення.
+Ці методи мають певний функціонал і викликаються всередині класу у певний момент.
+
 об"єкти/екземпляри класу НЕ підтримують математичних бінарних операцій (+, *, /, -) !
 When we add two objects with binary ‘+’ operator - it throws an error,
 because compiler don’t know how to add two objects.

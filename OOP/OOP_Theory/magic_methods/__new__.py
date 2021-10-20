@@ -1,9 +1,8 @@
-
-
-
-
-
-
+"""
+magic methods = dunder methods (Double UNDERscore) -
+це спеціальні методи, які починаються і закінчуються на два нижніх підкреслення.
+Ці методи мають певний функціонал і викликаються всередині класу у певний момент.
+"""
 
 """
 8. Create class City with name, population instance attributes, return a new instance only when population > 1500,
