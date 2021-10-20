@@ -1,13 +1,14 @@
 """
 NamedTuple (іменований кортеж) - це також клас, який містить незмінні дані, але у форматі кортежу,
-доступ до яких здійснюється по імені/атрибуту (author_1.name), або по індексу: author_1[0].
+доступ до яких здійснюється по імені/атрибуту (author_1.name), або по індексу: author_1[0],
+де author_1 - об"єкт
 
 Вони імпортуються з бібліотеки collections.
 Команда namedtuple створює клас з переліком атрибутів і
 цей створений клас зберегають в змінну як правило із такою ж назвою, що і назва створюваного клкасу.
 А вже через цю змінну далі створюється екземпляр класу.
 Наша змінна буде також належати до кортежу: print(isinstance(<назва змінної>, tuple))
-і в неї є методи, які належать до кортежу: print(dir(<назва змінної>))
+і в неї є методи, які має кортеж: print(dir(<назва змінної>))
 
 """
 from collections import namedtuple
@@ -27,7 +28,7 @@ print(author_1.name, ":", author_1.topic)   # доступ до даних по 
 
 
 Author_new = namedtuple('Author_new', 'topic name language')
-# перелік імен атрибутів можна вказувати в лісті, чи в стрічці, чи в кортежі...
+# перелік імен атрибутів можна вказувати в лісті, чи в стрічці...
 author_2 = Author_new('OOP part 2', 'Rostyslav', 'EN')
 print(author_2[0])     # OOP part 2
 print(author_2.name)   # Rostyslav
@@ -41,25 +42,40 @@ print(author_3[2])   # Ukr
 
 print('$ '*20)
 Human = namedtuple('Person', 'name surname date country age id')
-# в Human міститься посилання на клас Person,
-# і тепер через змінну Human ми будемо створювати екземпляру класу
+"""
+в Human міститься посилання на клас Person,
+"""
+print(Human)   # <class '__main__.Person'>
+"""
+і тепер через змінну Human ми будемо створювати екземпляру класу Person
+"""
 person_1 = Human('Megan', 'Jones', '1988-10-24', 'Bolivia', "10", "10")
+# print(type(person_1))   # <class '__main__.Person'>
+print(person_1)
+# Person(name='Megan', surname='Jones', date='1988-10-24', country='Bolivia', age='10', id='10')
 
-# наша змінна person_1 є також кортежем
+"""
+наша змінна person_1 є також кортежем
+"""
 print(isinstance(person_1, tuple))    # True
-# отже в неї є методи, які належать до кортежу, а також є інші специфічні методи (напр. _asdict())
+"""
+отже в неї є методи, які належать до кортежу, а також є інші специфічні методи (напр. _asdict())
+"""
 print(dir(person_1))
 print(person_1.count('10'))   # 2
 print(person_1._asdict())
 # {'name': 'Megan', 'surname': 'Jones', 'date': '1988-10-24', 'country': 'Bolivia', 'age': 10, 'id': 10}
-
-# ми можемо доступатись до атрбутів по імені:
+"""
+ми можемо доступатись до атрбутів по імені:
+"""
 print(person_1.age, person_1.name, person_1.date)   # 10 Megan 1988-10-24
 
-# но ми НЕ можемо змінювати значення цих атрибутів:
-# person_1.name = "Анна"    # AttributeError: can't set attribute
+"""
+но ми НЕ можемо змінювати значення цих атрибутів:
+person_1.name = "Анна"    # AttributeError: can't set attribute.
 
-# але існує закритий метод _replace(), за допомогою якого ми все ж можемо змінити значення атрибутів
+Aле існує закритий метод _replace(), за допомогою якого ми все ж можемо змінити значення атрибутів
+"""
 person_1 = person_1._replace(name="АННА")
 print(person_1.name)
 print(person_1)

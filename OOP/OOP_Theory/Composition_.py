@@ -56,9 +56,11 @@ class Laptop:  # class-container
         self.battery1 = Battery(50)
         self.battery2 = Battery()
 
+
 class Battery:
     def __init__(self, charge_level=100):
         self.charge_level = charge_level
+
 
 laptop = Laptop()
 print(laptop.battery1)
@@ -67,6 +69,3 @@ print(laptop.battery1.charge_level)
 # 50
 print(laptop.battery2.charge_level)
 # 100
-
-
-

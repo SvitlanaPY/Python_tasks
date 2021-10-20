@@ -11,7 +11,6 @@ class Car:
         self.engine = engine_
 # У engine_ - об"єкт класу Engine: <__main__.Engine object at 0x7f785455f460>
 # self.engine - атрибут об"єкту car1 класу Car
-#  Клас, у
 
 class Engine:
     def __init__(self):
@@ -37,6 +36,7 @@ class Guitar:
         self.string = string
         print('Hi')
 # У self.string буде летіти об"єкт gs класу GuitarString
+
 
 class GuitarString:
     def __init__(self):

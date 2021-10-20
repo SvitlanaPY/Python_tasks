@@ -37,6 +37,8 @@ print()
 print("Anna has {0:5} apples and {1:3} peaches.".format(1, 2))
 # OUTPUT: Anna has     1 apples and   2 peaches.
 
+
+
 print('\n% OPERATOR')
 # % OPERATOR
 # 10. With % operator
@@ -60,6 +62,7 @@ apple = 11
 peach = "ten"
 print(f"Anna has {apple} apples and {peach} peaches.")
 # OUTPUT: Anna has 11 apples and ten peaches.
+
 
 print()
 # 12:
