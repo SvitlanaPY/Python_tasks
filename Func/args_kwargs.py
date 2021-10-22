@@ -101,3 +101,10 @@ print(a)    # [2, 22, 3, 33, 4, 55]
 print(*[2, 22, 3, 33, 4, 55])   # = print(*a) --> 2 22 3 33 4 55
 
 # print(*a) == print(2, 22, 3, 33, 4, 55)
+
+
+def lstt(*args):
+    value = list(args)
+    return value
+
+print(lstt(1, 2, 3, 4))

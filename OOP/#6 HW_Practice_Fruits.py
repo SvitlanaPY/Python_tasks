@@ -16,19 +16,15 @@ class GardenMeta(type):
 
 
 class Garden(metaclass=GardenMeta):
-    def __init__(self, fruits, gardener, fruit_insects):  # + vegetable_insects, vegetables
-        # self.vegetables = vegetables
+    def __init__(self, gardener, fruits, fruit_insects):
         self.gardener = gardener
         self.fruits = fruits
         self.fruit_insects = fruit_insects
-        # self.vegetable_insects = vegetable_insects
 
     def show_the_garden(self):
         print(f'I am gardener - {self.gardener}')
-        # print(f'I have such vegetables {self.vegetables}')
         print(f'There are {len(self.fruits)} apples in the garden.')
         print(f'There are {self.fruit_insects.pests_quantity} fruit insects in the garden!!!')
-        # print(f'There are {self.vegetable_insects} vegetable insects in the garden!!!')
 
 class Fruits:
     def __init__(self, fruits_type):
