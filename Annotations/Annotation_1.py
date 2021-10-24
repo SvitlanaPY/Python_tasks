@@ -35,9 +35,3 @@ print("add_lsts: ", add_numbers([1, 2, 3], [4, 5, 6]))
 
 print(add_numbers.__annotations__)
 # {'a': <class 'int'>, 'b': <class 'int'>, 'return': <class 'int'>}
-
-
-
-
-
-
