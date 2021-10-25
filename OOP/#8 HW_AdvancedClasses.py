@@ -1,7 +1,7 @@
 from __future__ import annotations
-from abc import ABC, abstractmethod
-from typing import Dict, Any
 from random import randint
+from abc import ABC, abstractmethod
+from typing import Dict, Any, Union
 
 
 class Animal:
@@ -33,7 +33,7 @@ class Herbivorous(Animal):
         pass
 
 
-# AnyAnimal = Any[Herbivorous, Predators]
+AnyAnimal: Union[Herbivorous, Predators]
 
 
 class Forest:

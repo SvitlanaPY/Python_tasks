@@ -1,6 +1,6 @@
 """
-МНОЖИННЕ НАССЛІДУВАННЯ - така ситуація, при якій ваш клас наслідується і має кілька батьківських класів
-Порядок пошуку методів залежить від порядку, в якому вказані батьківські класи
+МНОЖИННЕ НАССЛІДУВАННЯ - така ситуація, при якій ваш клас наслідується і має кілька батьківських класів.
+Порядок пошуку методів залежить від порядку, в якому вказані батьківські класи.
 
 З наслідуванням використовуються два вбудовані методи:
 isinstance() - перевіряє, чи наш об"єкт відноситься до якогось конкретного класу
@@ -9,9 +9,10 @@ issubclass() - дозволяє перевірити саме наслідува
 
 Порядок пошуку методів залежить від порядку, в якому вказані батьківські класи,
 і називається MRO = method resolution order
-MRO - це така логіка всередині пайтона, яка дозволяє нам визначити порядок, в якому пайтон буде шукати методи в ієрархії цих класів
+MRO - це така логіка всередині пайтона, яка дозволяє нам визначити порядок,
+в якому пайтон буде шукати методи в ієрархії цих класів.
 
-його можна подивитись наступним чином:
+MRO можна подивитись наступним чином:
 <child class>.__mro__  /(print(Person.__mro__))
 або
 <child class>.mro()   /(print(Person.mro()))
@@ -45,7 +46,7 @@ class Builder1:
     def can_build(self):
         print("I am a builder, I can build")
 
-class Person1(Doctor1, Builder1):   # клас Person візьме поведінку з класу Doctor і з класу Builder
+class Person1(Doctor1, Builder1):   # клас Person візьме поведінку з класу Doctor1 і з класу Builder1
 
     def can_build(self):
         print("I am human, I can build")
@@ -68,7 +69,7 @@ class Builder2:
     def can_build(self):
         print("I am a builder, I can build")
 
-class Person2(Doctor2, Builder2):   # клас Person візьме поведінку спершу з класу Doctor, а потім з класу Builder
+class Person2(Doctor2, Builder2):   # клас Person візьме поведінку спершу з класу Doctor2, а потім з класу Builder2
     pass
     # def can_build(self):
     #     print("I am human, I can build")
@@ -79,15 +80,15 @@ pp.can_build()
 """
 Порядок пошуку методів залежить від порядку, в якому вказані батьківські класи, 
 і називається MRO = method resolution order
-його можна подивитись наступним чином:
-<child class>.__mro__  /(print(Person.__mro__))
+MRO можна подивитись наступним чином:
+<child class>.__mro__  /(print(Person2.__mro__))
 або
-<child class>.mro()   /(print(Person.mro()))
+<child class>.mro()   /(print(Person2.mro()))
 
 """
-print(Person.__mro__)
+print(Person2.__mro__)
 # (<class '__main__.Person'>, <class '__main__.Doctor'>, <class '__main__.Builder'>, <class 'object'>)
-print(Person.mro())
+print(Person2.mro())
 # [<class '__main__.Person'>, <class '__main__.Doctor'>, <class '__main__.Builder'>, <class 'object'>]
 
 
