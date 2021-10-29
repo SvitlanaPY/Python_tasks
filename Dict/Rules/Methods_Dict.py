@@ -1,3 +1,4 @@
+
 person = {'lastName': 'Ivanov', 'firstName': 'Ivan', 'city': 'Samara', 'University': 'SGU', 'marks': [5, 4, 3, 5, 5, 4, 3, 5]}
 q = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five'}
 
@@ -118,4 +119,4 @@ for para in person.items():
 print()
 for para in person.items():
     print(para[0], '-', para[1])
-# print(person.items())
+print(person.items())
