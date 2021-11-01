@@ -36,7 +36,7 @@ print("2. ", "- "*20)
 """
 s = 'hello'
 try:
-    s[7]
+    s[7]   # рівносильно запису 'hello'[7]
 except IndexError:
     print('error: IndexError')
 
