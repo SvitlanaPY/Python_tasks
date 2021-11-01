@@ -27,7 +27,8 @@ Exception, SystemExit, GeneratorExit, KeyboardInterrupt
 Всі решта - звичайні виключення.
 Exception - є виключенням, від якого наслідуються всі основні виключення, з якими ми зустрічаємось в програмуванні.
 Щоб відловити виключення певного типу, то можна звертатись не конкретно до цього типу виключення, а до його батьківського типу.
-Наприклад, щоб відловити IndexError ми можемо звертатись до LookupError(батьківський клас для IndexError)
+Наприклад, щоб відловити IndexError ми можемо звертатись до LookupError(батьківський клас для IndexError).
+
 """
 t = IndexError()
 print(isinstance(t, IndexError))   # True - means that "t" is object of class IndexError
