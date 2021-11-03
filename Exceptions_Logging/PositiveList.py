@@ -36,10 +36,11 @@ class NonPositiveError(Exception):
 class PositiveList(list):
     def append(self, x):
         if x > 0:
-            super().append(x)
+            super().append(x)   # list.append(x)
         else:
             print(self)
-            raise NonPositiveError("Negative value entered!")
+            raise NonPositiveError("Negative value entered!!!")
+
 
 obj = PositiveList()
 obj.append(5)
