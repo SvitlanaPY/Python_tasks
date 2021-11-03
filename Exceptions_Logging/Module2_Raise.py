@@ -1,3 +1,7 @@
+"""
+
+"""
+
 # def greeting(name):
 #     if name[0].isupper():
 #         return "Hello, " + name
@@ -5,7 +9,14 @@
 #         raise ValueError(f'{name} -- is inappropriate name')
 #
 # print(greeting("Anton"))
+# # Hello, Anton
 # print(greeting("anton"))
+# # Traceback (most recent call last):
+# #   File "/home/svitlana/Projects/Python_Tasks/Exceptions_Logging/Module2_Raise.py", line 12, in <module>
+# #     print(greeting("anton"))
+# #   File "/home/svitlana/Projects/Python_Tasks/Exceptions_Logging/Module2_Raise.py", line 9, in greeting
+# #     raise ValueError(f'{name} -- is inappropriate name')
+# # ValueError: anton -- is inappropriate name
 
 
 def greet(name):
