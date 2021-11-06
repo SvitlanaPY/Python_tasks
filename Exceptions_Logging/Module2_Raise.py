@@ -1,6 +1,3 @@
-"""
-
-"""
 
 # def greeting(name):
 #     if name[0].isupper():

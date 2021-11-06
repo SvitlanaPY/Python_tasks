@@ -120,3 +120,25 @@ print()
 for para in person.items():
     print(para[0], '-', para[1])
 print(person.items())
+
+
+"""
+Словник my_dict апдейтується/розширюється значеннями зі словника my_dict_2.
+Значення в словнику my_dict перезатираються.
+"""
+my_dict = {"Developer" : "Ann"}
+my_dict_2 = {"Macbook": "Pro", "Developer": "Nick", "Iphone": 1}
+my_dict.update(my_dict_2)
+print(my_dict)
+# {'Macbook': 'Pro', 'Developer': 'Nick', 'Iphone': 1}
+print(my_dict_2)
+# {'Macbook': 'Pro', 'Developer': 'Nick', 'Iphone': 1}
+
+
+my_dict = {"Developer": "Ann"}
+my_dict_2 = {"Macbook": "Pro", "Developer": "Nick", "Iphone": 1}
+my_dict_2.update(my_dict)
+print(my_dict)
+# {'Developer': 'Ann'}
+print(my_dict_2)
+# {'Macbook': 'Pro', 'Developer': 'Ann', 'Iphone': 1}
