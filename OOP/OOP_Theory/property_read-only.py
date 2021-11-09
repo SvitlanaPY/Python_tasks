@@ -17,3 +17,28 @@ print(p.n)
 
 setattr(p, 'n', 'rajav')
 # AttributeError: can't set attribute
+
+
+print("# " * 15)
+
+
+class Human:
+    def __init__(self, name, surname):
+        self.name = name
+        self.surname = surname
+
+    @property
+    def get_full_name(self):
+        return f'{self.name} {self.surname}'
+
+
+human1 = Human("Анна", "Тех")
+print(human1.get_full_name)
+# Анна Тех
+
+human2 = Human("Olha", "Smith")
+print(human2.get_full_name)
+# Olha Smith
+human2.name = 'Taya'
+print(human2.get_full_name)
+# Taya Smith

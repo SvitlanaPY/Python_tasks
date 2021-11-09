@@ -37,5 +37,3 @@ print()
 new_json = json.dumps(todos, indent=2)
 print(type(new_json))   # <class 'str'>
 print(new_json)   # переводимо наш python-об"єкт типу ліст в json-строку
-
-

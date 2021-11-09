@@ -315,7 +315,8 @@ humn1 = Humann('Anna', 'Tech')
 print(humn1.full_name)
 humn1.full_name = 'Rob Squad'
 print("NAME: ", humn1.name)
+# NAME:  Rob
 print("SURNAME: ", humn1.surname)
+# SURNAME:  Squad
 print("FULL NAME:  ", humn1.full_name)
-
-
+# FULL NAME:   Rob Squad

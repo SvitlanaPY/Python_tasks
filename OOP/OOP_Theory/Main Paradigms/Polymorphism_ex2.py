@@ -19,6 +19,7 @@ class Rectangle:
     def __str__(self):
         return f"Rectangle: {self.a}*{self.b} = "
 
+
 class Square:
     def __init__(self, a):
         self.a = a

@@ -29,6 +29,7 @@ print("class id: ", Student.id)
 print('class id is: ', getattr(Student, "id"))
 # class id is:  0
 
+
 print()
 print("stud NAME: ", stud.name)   # атрибут name об"єкту stud
 # stud NAME:  Jim
@@ -45,3 +46,10 @@ student_email = 'email_2@gmail.com'        # create 'student_email' variable
 setattr(stud, 'email', student_email)
 print('stud.email=', getattr(stud, "email"))
 # OUTPUT: stud.email= email2@gmail.com
+
+a = 'city'
+student_city = 'Lviv'
+setattr(stud, a, student_city)
+print('stud.student_city=', getattr(stud, "city"))
+print(stud.__dict__)
+# {'id': 101, 'name': 'Jim', 'email': 'email_2@gmail.com', 'city': 'Lviv'}
