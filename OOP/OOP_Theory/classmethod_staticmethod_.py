@@ -122,14 +122,14 @@ print(Person.is_adult(28))   # True
 
 print("* "*15)
 """
-@CLASSMETHOD - Класметоди потрібні, коли ми хочемо робити якусь обробку НЕ над екземплярами класу, а над цілим класом.
+@CLASSMETHOD - Класметоди потрібні, коли ми хочемо робити якусь обробку НЕ над екземплярами класу, 
+а над цілим класом.
 
 Класметод приймає першим параметром клас - cls. 
 На відміну від звичайного метода (який прив"язується до екземпляра класу), 
 класметод прив"язаний до самого класу, а не до екземпляра класу, і 
 класметод можна викликати без створення екземпляру класу, а безпосередньо за допомогою класу:
 Exmpl.class_hello().
-
 
 При викликові метода від екземпляра класу, у параметр прилетить назва класу нашого екземпляра
 exmpl1.class_hello()   # class_hello <class '__main__.Exmpl'>
@@ -148,8 +148,8 @@ class Exmpl:
         print(f'class_hello {cls}')
 
 exmpl1 = Exmpl()
-Exmpl.class_hello()    # class_hello <class '__main__.Exmpl'>
-exmpl1.class_hello()   # class_hello <class '__main__.Exmpl'>
+Exmpl.class_hello()       # class_hello <class '__main__.Exmpl'>
+exmpl1.class_hello()      # class_hello <class '__main__.Exmpl'>
 print(exmpl1.__class__)   # <class '__main__.Exmpl'>  --->  класом екземпляра exmpl1 є клас Exmpl
 
 

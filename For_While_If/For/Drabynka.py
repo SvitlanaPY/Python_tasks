@@ -12,5 +12,5 @@
 n = int(input())
 x = ''
 for i in range(0, n):
-    x = x + str(i + 1)
+    x = x + str(i + 1) + ' '
     print(x)

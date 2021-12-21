@@ -3,6 +3,8 @@
 x = 10.34
 x = x % 1
 print(round(x, 3))
-# print(x - int(x))       # 10.34: 10 + 0.34: x - int(x)
+
+y = 10.57
+print(y - int(y))       # 10.34: 10 + 0.34: x - int(x)
 
 

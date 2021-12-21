@@ -73,8 +73,9 @@ while True:
         break
     d[text[0]] = d.get(text[0], []) + [int(text[1])]
 lst = []
-lst1 = []
-print(d)   # {'Зина': [5, 3], 'Термиона': [4, 4], 'Билл': [5, 4, 4, 5]}
+lst1 = []import os
+temp = os.environ["TEMP"]
+print(d)   # {'Зина': [5, 3], 'Термиона': [4, 4], 'Билл': [5, 4, 4, 5]}                                                                                                                                                                                                                                                                                                                                                             
 for key, val in d.items():
     summ = 0
     for i in range(len(val)):
