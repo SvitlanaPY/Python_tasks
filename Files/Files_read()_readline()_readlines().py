@@ -14,7 +14,7 @@ y = f.read()
 print("read ALL file")
 print(y)
 
-# метод read() - повертає строкове предаставлення зчитаного тексту із символ переносу рядка;
+# метод read() - повертає строкове предаставлення зчитаного тексту із символом переносу рядка;
 f_ = open('333.txt')
 yy = f_.read()
 print("repr yy: ", repr(yy))
@@ -29,13 +29,14 @@ print("c: ", c)
 # c:  ['First Line\n', 'Second Line\n', 'Third Line']
 
 
-# щоб видалити службовий символ переносу рядку - метод splitlines():
+# щоб видалити службовий символ переносу рядку використовуємо метод splitlines():
 ff = open('test.txt')
 z = ff.read()
 print("z: ", z)
-print("type(z): ", type(z))   # <class 'str'>
-print("z: ", repr(z))    # виводимо представлення z у якості строки; z - буде строка
 # z:  'First Line\nSecond Line\nThird Line'
+print("type(z): ", type(z))
+# <class 'str'>
+print("z: ", repr(z))    # виводимо представлення z у якості строки; z - буде строка
 # до строки можна застосувати метод splitlines(), який розбиває нашу строку/текст на стрічки і запихає в list без \n
 # метод splitlines() - повертає список (list) всіх рядків БЕЗ службового символу переносу строки (без \n)
 zz = z.splitlines()
@@ -48,7 +49,9 @@ print("zz: ", zz)
 fff = open('333.txt')
 q = fff.readline()
 print("type(q): ", type(q))
+# type(q):  <class 'str'>
 print("q: ", q)
+# q:  First Line
 print("зчитаний ОДИН рядок - q: ", repr(q))
 # зчитаний ОДИН рядок - q:  'First Line\n'
 # метод строки rstrip() видаляє справа в строці всі пробільні символи і символи переносу строки, повернеться строка
