@@ -9,5 +9,5 @@ b = x2 % 10
 # print(b)
 c = x2 // 10
 # print(c)
-sum = a + b + c
-print(sum)
+summ = a + b + c
+print(summ)
