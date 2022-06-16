@@ -35,6 +35,7 @@ import math
 # Sample Output 2:
 # 10
 # L, W, H = map(int, input().split())
-# P = ((L + W) * 2)   # периметр
-# print(math.ceil((P * H / 16)))
 # print(math.ceil((2 * L * H + 2 * W * H ) / 16))
+# L * H - площа стіни1
+# W * H - площа стіни2
+# Є дві стіни1 і дві стіна2, тому: 2 * L * H + 2 * W * H
