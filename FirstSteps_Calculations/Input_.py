@@ -49,3 +49,31 @@
 # print(#'hkhkjjhkhkjh')   # SyntaxError: unexpected EOF while parsing
 
 # print('#hkhkjjhkhkjh')   # #hkhkjjhkhkjh
+
+s = """hello
+world
+hi
+Earth!"""
+# 'hello\nworld\nhi\nEarth!'
+# print(s)
+# hello
+# world
+# hi
+# Earth!
+
+# m = 'hello\nworld\nhi\nEarth!'
+# print(m)
+# hello
+# world
+# hi
+# Earth!
+
+l = 'hi\nworld'
+print(len(l))   # 8 (symbol \n is counted as one symbol, although it contains two signs)
+
+a = '  /~~~\ '
+b = " //^ ^\\"
+c = "(/(_*_)\)"
+d = "_/''*''\_"
+e = "(/_)^(_\)"
+print(a, b, c, d, e, sep='\n'
