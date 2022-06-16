@@ -35,4 +35,8 @@ s = input("Введите одну строку, например (Codeforces): 
 s = s.replace('o', '').replace('e', '').replace('a', '').replace('y', '').replace('i', '').replace('u', '')
 print(s)   # 'cdfrcs'
 s = s.replace('', '.')
+print(s)    # .c.d.f.r.c.s.
 print(s[:-1])   # .c.d.f.r.c.s
+
+n = input()
+print(n.upper()[0:3] + n.lower()[3:-3] + n.upper()[-3:])

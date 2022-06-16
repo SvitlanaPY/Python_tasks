@@ -67,13 +67,13 @@ Earth!"""
 # world
 # hi
 # Earth!
-
-l = 'hi\nworld'
-print(len(l))   # 8 (symbol \n is counted as one symbol, although it contains two signs)
-
-a = '  /~~~\ '
-b = " //^ ^\\"
-c = "(/(_*_)\)"
-d = "_/''*''\_"
-e = "(/_)^(_\)"
-print(a, b, c, d, e, sep='\n'
+#
+# l = 'hi\nworld'
+# print(len(l))   # 8 (symbol \n is counted as one symbol, although it contains two signs)
+#
+# a = r'  /~~~\ '
+# b = r" //^ ^\\ "
+# c = r"(/(_*_)\)"
+# d = r"_/''*''\_"
+# e = r"(/_)^(_\)"
+# print(a, b, c, d, e, sep='\n')
