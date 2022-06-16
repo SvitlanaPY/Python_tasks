@@ -3,7 +3,7 @@
 # а если не встречается ни разу, выведите число -2.
 
 # s = input()
-s = 'ofofofofofofofofo'
+s = 'ofof'
 # s = 'coffee'
 find_f = s.find('f')    # індекс першого знайденого f
 # print(s.count('f'))
