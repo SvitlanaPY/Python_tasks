@@ -39,6 +39,7 @@ print('count "l" is: ', s.count('l', 4, len(s) + 1))   # 1
 d = '111'
 print(d.rjust(7, '0'))   # 0000111
 
+
 q = '   hello   \n'
 print(q.strip())   # hello
 # .strip() - видаляє зі строки всі пробіли і переноси на нову строку зліва і справа
