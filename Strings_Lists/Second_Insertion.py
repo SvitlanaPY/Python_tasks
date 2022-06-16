@@ -3,7 +3,7 @@
 # а если не встречается ни разу, выведите число -2.
 
 # s = input()
-s = 'ofof'
+s = 'ofofofofofofofofo'
 # s = 'coffee'
 find_f = s.find('f')    # індекс першого знайденого f
 # print(s.count('f'))
@@ -13,6 +13,7 @@ elif s.count('f') == 0:
     print("-2")
 else:
     print(s.find('f', find_f + 1))
+    # print(s.find('f', s.find('f') + 1))
 
 
 # Если вызвать метод find с тремя параметрами S.find(T, a, b), то поиск будет осуществляться в срезе S[a:b].
