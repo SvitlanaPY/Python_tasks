@@ -140,3 +140,20 @@ print()
 # 11 % 5 = 1
 a, b = int(input("Enter val1: ")), int(input("Enter val2: "))
 print(f'{a} / {b} = {a / b}\n{a} // {b} = {a // b}\n{a} % {b} = {a % b}')
+
+
+"""
+Напишите программу для перевода натурального значения секунд в значение минут определенного формата.
+
+Sample Input 1:
+99
+Sample Output 1:
+99 сек - это 1 мин. 39 сек.
+
+Sample Input 2:
+123
+Sample Output 2:
+123 сек - это 2 мин. 3 сек.
+"""
+t = int(input())
+print(f"{t} сек - це {t // 60} хв. {t % 60} сек.")
