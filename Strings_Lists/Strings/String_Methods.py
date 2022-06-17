@@ -63,3 +63,6 @@ print(",,,".join(ip.split('.')))   # 192,,,168,,,0,,,105
 
 # text = 'Smells Like Teen Spirit'
 print(",".join(input("Enter text (Smells Like Teen Spirit): ").split()))   # Smells,Like,Teen,Spirit
+
+w = 'Ann Avann Pann'
+print(';'.join(w.split()))
