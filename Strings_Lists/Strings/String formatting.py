@@ -8,12 +8,12 @@ print('\n"".FORMAT()')
 # "".FORMAT()
 # 4. With .format and curly braces {}
 print("Anna has {1} apples and {0} peaches.".format(int_a, int_aa))
-# OUTPUT: Anna has 55 apples and 55 peaches.
+# OUTPUT: Anna has 77 apples and 55 peaches.
 
 print()
 # 5. With .format and curly braces {}
 print("Anna has {} apples and {} peaches.".format(int_a, int_aa))
-# OUTPUT: Anna has 55 apples and 55 peaches.
+# OUTPUT: Anna has 55 apples and 77 peaches.
 
 print()
 # 6. By passing index numbers into the curly braces.
@@ -50,10 +50,10 @@ print("Anna has %s apples and %d peaches." % (green_apples, ripe_peaches))
 print()
 # 11*. With variable substitutions by name (hint: by using dict)
 app = 5
-pch = "two"
+pch = "three"
 fruits_dict = {'one': app, 'two': pch}
 print("Anna has %(one)d apples and %(two)s peaches." % fruits_dict)
-# OUTPUT: Anna has 5 apples and two peaches.
+# OUTPUT: Anna has 5 apples and three peaches.
 
 # F-STRING:
 print('\nF-STRINGS')
@@ -75,11 +75,15 @@ text2 = f"Дорогий {name.upper()} {mid_name.upper()}, баланс ваш�
 print(text2)
 
 print()
-# 13:
+#
+name = 'John'
+mid_name = 'Ivanov'
+balance = 32.56
 def func(x):
     return x ** 3
-text3 = f"Дорогий {name.upper()} {mid_name.upper()}, ваш виграш складає {func(500)}грн."
-print(text3)
+text3 = f"Дорогий {name.lower()} {mid_name.upper()}, ваш виграш складає {func(500)}грн."
+print(text3)   # Дорогий JOHN IVANOV, ваш виграш складає 125000000грн.
+
 
 print()
 # 14:
@@ -97,9 +101,9 @@ print(text6)    # Дорогий Bob Smith, ваш виграш складає 0
 # ]
 # for i in lst_:
 #     print(i)
-#     ['Tom', 'Winnie', 1000]
-#     ['Jeck', 'Johnson', 2000]
-#     ['Diana', 'Smith', 3000]
+# ['Tom', 'Winnie', 1000]
+# ['Jeck', 'Johnson', 2000]
+# ['Diana', 'Smith', 3000]
 
 
 print()
