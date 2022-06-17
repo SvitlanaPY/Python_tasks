@@ -11,6 +11,11 @@ print(aa, type(aa))
 # ['h', 'e', 'l', 'l', 'o', 'h', 'i'] <class 'list'>
 
 
+b = [1, 2, 3]
+a_a, b_b, c_c = b
+print('a_a=', a_a, 'b_b=', b_b, 'c_c=', c_c)
+
+
 # a = list(map(str, input().upper().split()))
 # print(a)
 
@@ -18,6 +23,6 @@ print(aa, type(aa))
 # print(s)
 # print('\n'.join(s))
 
-ss = input()
-print(ss)
-print('\n'.join(ss.split()))
+# ss = input()
+# print(ss)
+# print('\n'.join(ss.split()))
