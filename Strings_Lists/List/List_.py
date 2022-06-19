@@ -17,6 +17,7 @@ print('a_a=', a_a, 'b_b=', b_b, 'c_c=', c_c)
 
 
 # a = list(map(str, input().upper().split()))
+# a = list(map(int, input("Enter (3 4 5 2 1): ").split()))
 # print(a)
 
 # s = input().split()
