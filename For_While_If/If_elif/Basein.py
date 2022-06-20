@@ -15,6 +15,7 @@ INPUT2: 71 26 21 42
 OUTPUT2: 5
 """
 
+
 n = int(input())
 m = int(input())
 x = int(input())    # відстань до довгого бортіка
