@@ -27,3 +27,5 @@ print('a_a=', a_a, 'b_b=', b_b, 'c_c=', c_c)
 # ss = input()
 # print(ss)
 # print('\n'.join(ss.split()))
+
+# b = list(map(int, input.replace('',' ').strip().split()))
