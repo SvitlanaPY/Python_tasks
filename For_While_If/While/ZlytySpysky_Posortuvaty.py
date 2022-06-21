@@ -41,17 +41,6 @@ while len(s) != 0:
     print(s.pop(minn), end=' ')
 
 
-# a, b = map(int, input().split())
-# n = list(map(int, input().split()))
-# m = list(map(int, input().split()))
-# s = n + m
-# ss = []
-# while len(s) != 0:
-#     ss.append(min(s))
-#     index_minn = s.index(min(s))
-#     s.pop(index_minn)
-# print(*ss)
-
 # n, m = map(int, input().split())
 # lst_1 = list(map(int, input().split()))
 # lst_2 = list(map(int, input().split()))
@@ -62,3 +51,15 @@ while len(s) != 0:
 #     lst_new.append(min_item)
 #     lst_1_2.remove(min_item)
 # print(*lst_new)
+
+
+# a, b = map(int, input().split())
+# n = list(map(int, input().split()))
+# m = list(map(int, input().split()))
+# s = n + m
+# ss = []
+# while len(s) != 0:
+#     ss.append(min(s))
+#     index_minn = s.index(min(s))
+#     s.pop(index_minn)
+# print(*ss)

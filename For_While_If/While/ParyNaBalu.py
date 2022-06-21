@@ -39,6 +39,14 @@ Sample Input 3:
 1 2 3
 Sample Output 3:
 2
+
+Sample Input 4:
+3
+1 2 3
+2
+3 4
+Sample Output 4:
+2
 """
 
 b = int(input())
@@ -63,24 +71,24 @@ print(pairs)
 
 
 # # (2)
-# b = int(input())
-# boys = list(map(int, input().split()))
-# g = int(input())
-# girls = list(map(int, input().split()))
-# boys.sort()
-# girls.sort()
-# pairs = 0
-# i = 0   # вказівник boys
-# j = 0   # вказівник girls
-# while i < b and j < g:
-#     print(boys[i])
-#     print(girls[j])
-#     if abs(boys[i] - girls[j]) <= 1:
-#         pairs = pairs + 1
-#         j = j + 1
-#         i = i + 1
-#     elif boys[i] < girls[j]:
-#         i += 1
-#     else:
-#         j += 1
-# print(pairs)
+b = int(input())
+boys = list(map(int, input().split()))
+g = int(input())
+girls = list(map(int, input().split()))
+boys.sort()
+girls.sort()
+pairs = 0
+i = 0   # вказівник boys
+j = 0   # вказівник girls
+while i < b and j < g:
+    print(boys[i])
+    print(girls[j])
+    if abs(boys[i] - girls[j]) <= 1:
+        pairs = pairs + 1
+        j = j + 1
+        i = i + 1
+    elif boys[i] < girls[j]:
+        i += 1
+    else:
+        j += 1
+print(pairs)
