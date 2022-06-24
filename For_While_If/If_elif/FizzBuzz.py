@@ -5,18 +5,19 @@ FizzBuzz
 “Buzz”, если это число делится на 5;
 “FizzBuzz”, если выполнены оба предыдущих условия;
 само это число в остальных случаях.
+
 """
 
-n = int(input())
-if n % 3 == 0:
-    if n % 5 == 0:
-        print('FizzBuzz')
-    else:
-        print('Fizz')
-elif n % 5 == 0:
-    print('Buzz')
-else:
-    print(n)
+# n = int(input())
+# if n % 3 == 0:
+#     if n % 5 == 0:
+#         print('FizzBuzz')
+#     else:
+#         print('Fizz')
+# elif n % 5 == 0:
+#     print('Buzz')
+# else:
+#     print(n)
 
 
 # n = int(input())
@@ -29,3 +30,14 @@ else:
 #         print('Fizz')
 # else:
 #     print('Buzz')
+
+#
+# i = int(input())
+# if i % 3 == 0 and i % 5 == 0:
+#     print("FizzBuzz")
+# elif i % 5 == 0:
+#     print("Buzz")
+# elif i % 3 == 0:
+#     print("Fizz")
+# else:
+#     print(i)
