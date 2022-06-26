@@ -4,21 +4,6 @@
 Скільки разів будь-яке значення зустрічалось в нашому списку
 """
 
-# s = 'abczjhdf aaajgkfYGg 543 *(!@$&*((__|} asdwe'
-# letters = [0] * 26
-# for i in s.lower():
-#     if i.isalpha():   # if 'a' <= i <= 'z':
-#         nomer = ord(i) - 97
-#         letters[nomer] += 1
-# print(letters)
-# # [5, 1, 1, 2, 1, 2, 3, 1, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1]
-#
-# for i in range(26):
-#     if letters[i] > 0:
-#         print(chr(i + 97) * letters[i], end='')
-# # aaaaabcddeffggghjjkswyz
-
-
 a = []
 from random import randint
 for i in range(10):
@@ -34,7 +19,23 @@ for i in a:
 for i in range(21):
     if count[i] > 0:
         print(i - 10, count[i])
-        # print((str(i - 10) + ' ') * count[i], end='')
+        # print((str(i - 10) + ' ') * count[i], end='')     # -9 -8 -7 -7 -5 -3 -3 -3 -2 -2
+
+
+# s = 'abczjhdf aaajgkfYGg 543 *(!@$&*((__|} asdwe'
+# letters = [0] * 26
+# for i in s.lower():
+#     if i.isalpha():   # if 'a' <= i <= 'z':
+#         nomer = ord(i) - 97
+#         letters[nomer] += 1
+# print(letters)
+# # [5, 1, 1, 2, 1, 2, 3, 1, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1]
+#
+# for i in range(26):
+#     if letters[i] > 0:
+#         print(chr(i + 97) * letters[i], end='')
+# # aaaaabcddeffggghjjkswyz
+
 
 # aa = [1, 2, 5, 4, 3, 2, 0, 6, 1, 5, 1]
 # count = [0] * (max(aa) + 1)
