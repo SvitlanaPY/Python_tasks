@@ -6,6 +6,15 @@ FizzBuzz
 “FizzBuzz”, если выполнены оба предыдущих условия;
 само это число в остальных случаях.
 
+Sample Input 1:
+15
+Sample Output 1:
+FizzBuzz
+
+Sample Input 2:
+10
+Sample Output 2:
+Buzz
 """
 
 # n = int(input())
