@@ -176,4 +176,4 @@ phrase = 'Take only the words that start with t in this sentence'
 letter = 'tT'
 print([i for i in phrase.split() if i[0] in letter])
 # OR
-# print([i for i in ph if i.startswith(('T', 't'))])
+print([i for i in ph if i.startswith(('T', 't'))])
