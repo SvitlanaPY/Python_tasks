@@ -77,3 +77,14 @@ Earth!"""
 # d = r"_/''*''\_"
 # e = r"(/_)^(_\)"
 # print(a, b, c, d, e, sep='\n')
+
+# n = list(map(int, input()))
+
+# n = list(map(int, input()))
+# # n = '456789'
+# print(n)   # [4, 5, 6, 7, 8, 9]
+#
+# n = list(map(str, input()))
+# # n = 'abcdefg'
+# print(n)   # ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
