@@ -12,10 +12,9 @@ print("q after clear(): ", q)   # q after clear():  {}
 print("\n.GET() method:")
 q = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five'}
 print(q.get(5))    # поверне five по ключу 5
-print(q.get(5, 'New five'))
+print(q.get(5, "New five"))
 print(q.get(6))    # поверне None по замовчуванню, оск ключа 6 в словнику немає
 print(q.get(7, "No such key"))   # поверне передане значення No such key по ключу 7, якого в словнику немає
-
 
 print("\n.SETDEFAULT() method:")
 # .setdefault()   - не лише поверне значення по ключу, але і може створити нову пару ключ-значення
@@ -40,7 +39,7 @@ print("q after .pop(6): ", q)
 
 
 print("\n.POPitem() method:")
-# не приймає параметрів і видаляє випадкові значення зі словника, пвертаючи саму пару
+# не приймає параметри і видаляє випадкові значення зі словника, повертаючи саму пару
 # popitem_ = q.popitem()
 # print("popitem_ = ", popitem_)   # popitem_ =  (7, None)
 # popitem_ = q.popitem()

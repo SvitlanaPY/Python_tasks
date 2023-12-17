@@ -9,7 +9,7 @@ todos_by_user = {}
 
 # Увеличение выполненных задач каждым пользователем.
 for todo in todos:
-    if todo["completed"]:
+    if todo["completed"] = True:
         try:
             # Увеличение количества существующих пользователей.
             todos_by_user[todo["userId"]] += 1
